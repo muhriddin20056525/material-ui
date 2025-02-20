@@ -622,3 +622,140 @@ const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 ```
 
 - `error` atributi formani error ko'rinishiga o'tkazadi
+
+---
+
+## **📌 9-Dars MUI Checkbox**
+
+📌 `Checkbox` – bu belgilash uchun ishlatiladigan komponent bo‘lib, foydalanuvchilarga bir yoki bir nechta variantlarni tanlash imkonini beradi.
+
+```tsx
+import { Box, FormControlLabel, Checkbox } from "@mui/material";
+
+<Box>
+  <FormControlLabel
+    label="I accept terms and conditions"
+    control={<Checkbox />}
+  />
+</Box>;
+```
+
+- `checkbox` yaratish
+- `label` checkbox yonidagi matn
+
+```tsx
+const [acceptTnC, setAcceptTnC] = useState(false);
+console.log(acceptTnC);
+
+const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setAcceptTnC(event.target.checked);
+};
+
+<Box>
+  <FormControlLabel
+    label="I accept terms and conditions"
+    control={<Checkbox checked={acceptTnC} onChange={handleChange} />}
+  />
+</Box>;
+```
+
+- `useState(false)` orqali checkboxning holati (belgilangan yoki belgilanmagan) saqlanadi.
+
+- Foydalanuvchi checkboxni bosganda, `handleChange` funksiyasi ishga tushadi va `checkbox` holatini `(true yoki false)` yangilaydi.
+
+- `FormControlLabel` va `Checkbox` orqali foydalanuvchiga tushunarli interfeys taqdim etiladi.
+
+```tsx
+<Box>
+  <Checkbox
+    icon={<BookMarkBorderIcon />}
+    checkedIcon={<BookMarkIcon />}
+    checked={acceptTnC}
+    onChange={handleChange}
+  />
+</Box>
+```
+
+- icon ga ega checkbox yaratish oddiy
+
+- `icon` atributiga dastlabki holatdagi icon yuklanadi
+- `checkedIcon` atributiga checked bo'lgan holatdagi icon yuklanadi
+
+```tsx
+const [skills, setSkills] = useState<string[]>([]);
+
+const handleSkillChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const index = skills.indexOf(event.target.value);
+
+  if (index === -1) {
+    setSkills([...skills, event.target.value]);
+  } else {
+    setSkills(skills.filter((skill) => skill !== event.target.value));
+  }
+};
+
+<Box>
+  <FormControl>
+    <FormLabel>Skills</FormLabel>
+    <FormGroup row>
+      <FormControlLabel
+        label="HTML"
+        value={"html"}
+        control={
+          <Checkbox
+            checked={skills.includes("html")}
+            onChange={handleSkillChange}
+          />
+        }
+      />
+      <FormControlLabel
+        label="CSS"
+        value={"css"}
+        control={
+          <Checkbox
+            checked={skills.includes("css")}
+            onChange={handleSkillChange}
+          />
+        }
+      />
+      <FormControlLabel
+        label="JavaScript"
+        value={"javascript"}
+        control={
+          <Checkbox
+            checked={skills.includes("javascript")}
+            onChange={handleSkillChange}
+          />
+        }
+      />
+    </FormGroup>
+  </FormControl>
+</Box>;
+```
+
+Ushbu kodning umumiy vazifasi – foydalanuvchining tanlagan ko‘nikmalarini (Skills) checkboxlar orqali boshqarish.
+
+**Asosiy funksiyalar:**
+
+- Foydalanuvchi checkbox orqali HTML, CSS yoki JavaScript'ni tanlashi mumkin.
+- Tanlangan skill’lar massiv (skills) ichida saqlanadi.
+- Agar checkbox belgilansa – skill massivga qo‘shiladi, aks holda – o‘chiriladi.
+- Tanlangan skill’lar avtomatik ravishda UI da aks etadi.
+
+```tsx
+<Box>
+  <FormControlLabel
+    label="I accept terms and conditions"
+    control={
+      <Checkbox
+        checked={acceptTnC}
+        onChange={handleChange}
+        size="small"
+        color="secondary"
+      />
+    }
+  />
+</Box>
+```
+
+- checkbox ga o'lcham va rang berish
