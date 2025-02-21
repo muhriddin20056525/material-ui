@@ -759,3 +759,55 @@ Ushbu kodning umumiy vazifasi – foydalanuvchining tanlagan ko‘nikmalarini (S
 ```
 
 - checkbox ga o'lcham va rang berish
+
+---
+
+## **📌 10-Dars MUI Switch**
+
+Material UI'dagi Switch – bu kalit (toggle) shaklidagi komponent bo‘lib, foydalanuvchiga ikki holat (yoqilgan va o‘chirilgan) o‘rtasida almashish imkonini beradi. U asosan sozlamalar yoki oddiy yoqish/o‘chirish funksiyalari uchun ishlatiladi.
+
+```tsx
+import { Box, FormControlLabel, Switch } from "@mui/material";
+<Box>
+  <FormControlLabel label="Dark Mode" control={<Switch />} />
+</Box>;
+```
+
+- `Switch` komponentidan foydalanish
+
+```tsx
+const [checked, setChecked] = useState(false);
+
+console.log({ checked });
+
+const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setChecked(event.target.checked);
+};
+
+<Box>
+  <FormControlLabel
+    label="Dark Mode"
+    control={<Switch checked={checked} onChange={handleChange} />}
+  />
+</Box>;
+```
+
+- `Switch` ning qiymatini olish
+
+```tsx
+<Box>
+  <FormControlLabel
+    label="Dark Mode"
+    control={
+      <Switch
+        checked={checked}
+        onChange={handleChange}
+        size="small"
+        color="success"
+      />
+    }
+  />
+</Box>
+```
+
+- `Switch` ga `rang` va `o'lcham` berish
