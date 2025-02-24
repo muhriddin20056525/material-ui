@@ -4,7 +4,8 @@
 // import MuiTypography from "./components/MuiTypography";
 // import MuiRadioButton from "./components/MuiRadioButton";
 // import MuiCheckbox from "./components/MuiCheckbox";
-import MuiSwitch from "./components/MuiSwitch";
+import MuiRating from "./components/MuiRating";
+// import MuiSwitch from "./components/MuiSwitch";
 
 export default function App() {
   return (
@@ -15,7 +16,8 @@ export default function App() {
       {/* <MuiSelect /> */}
       {/* <MuiRadioButton /> */}
       {/* <MuiCheckbox /> */}
-      <MuiSwitch />
+      {/* <MuiSwitch /> */}
+      <MuiRating />
     </div>
   );
 }

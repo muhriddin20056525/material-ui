@@ -811,3 +811,94 @@ const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 ```
 
 - `Switch` ga `rang` va `o'lcham` berish
+
+---
+
+## **📌 11-Dars MUI Rating**
+
+Material UI Rating komponenti foydalanuvchilarga yulduzlar orqali baho berish imkonini beradi. U interaktiv bo‘lib, baholarni hover yoki bosish orqali o‘zgartirish mumkin. Shuningdek, precision, icon, va size kabi propslar yordamida moslashtiriladi
+
+```tsx
+import { Rating } from "@mui/material";
+<Rating />;
+```
+
+- `Mui` ning `Rating` komponentidan foydalanish
+
+```tsx
+const [value, setValue] = useState<number | null>(null);
+
+console.log({ value });
+
+const handleChange = (
+  _event: React.ChangeEvent<{}>,
+  newValue: number | null
+) => {
+  setValue(newValue);
+};
+
+<Rating value={value} onChange={handleChange} />;
+```
+
+- `Rating` komponentidan nechta yuldzcha tanlanganligining qiymatini olish 5 yulduzlik tizimda bosilgan yulduzchaga qarab 1 dan 5 gacha raqam qaytaradi
+
+```tsx
+<Rating value={value} onChange={handleChange} precision={0.5} size="large" />
+```
+
+- `size` o'lcham berish uchun
+- `precision` yulduzchaning yarmini tanlash imkoniyatini qo'shish uchun
+
+```tsx
+<Rating
+  value={value}
+  onChange={handleChange}
+  precision={0.5}
+  size="large"
+  icon={<FavouriteIcon fontSize="inherit" color="error" />}
+  emptyIcon={<FavouriteBorderIcon fontSize="inherit" />}
+/>
+```
+
+- `Rating` komponentiga yulduzcha o'rniga icon qo'shish
+- `icon` - bosilganda ko'rinadigna icon
+- `emptyIcon` - default holatda ko'rinadigna icon
+
+```tsx
+const [value, setValue] = useState<number | null>(3);
+
+console.log({ value });
+
+const handleChange = (
+  _event: React.ChangeEvent<{}>,
+  newValue: number | null
+) => {
+  setValue(newValue);
+};
+
+<Rating
+  value={value}
+  onChange={handleChange}
+  precision={0.5}
+  size="large"
+  icon={<FavouriteIcon fontSize="inherit" color="error" />}
+  emptyIcon={<FavouriteBorderIcon fontSize="inherit" />}
+  readOnly
+/>;
+```
+
+- boshidan 3 ta icon belgilanib turadi va uni o'zgartirib bo'lmaydi
+
+```tsx
+<Rating
+  value={value}
+  onChange={handleChange}
+  precision={0.5}
+  size="large"
+  icon={<FavouriteIcon fontSize="inherit" color="error" />}
+  emptyIcon={<FavouriteBorderIcon fontSize="inherit" />}
+  highlightSelectedOnly
+/>
+```
+
+- `highlightSelectedOnly` faqat bitta iconni tanlash mumkin
