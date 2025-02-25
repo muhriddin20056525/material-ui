@@ -902,3 +902,49 @@ const handleChange = (
 ```
 
 - `highlightSelectedOnly` faqat bitta iconni tanlash mumkin
+
+---
+
+## **📌 12-Dars Autocomplete**
+
+MUI'dagi Autocomplete komponenti foydalanuvchilarga matn kiritish jarayonida mos variantlarni tavsiya qiluvchi dropdown menyu yaratish uchun ishlatiladi. U qidiruv funksiyasini qo‘llab-quvvatlaydi va statik yoki dinamik ma'lumotlar bilan ishlashi mumkin. Shuningdek, freeSolo, multiple, va disableClearable kabi xususiyatlar orqali moslashuvchanligi oshiriladi.
+
+```tsx
+import { Autocomplete, Stack, TextField } from "@mui/material";
+import { useState } from "react";
+
+const skills = ["HTML", "CSS", "JavaScript", "TypeScript", "React"];
+
+const [value, setValue] = useState<string | null>(null);
+console.log({ value });
+
+<Autocomplete
+  options={skills}
+  value={value}
+  onChange={(_, newValue: string | null) => setValue(newValue)}
+  renderInput={(params) => <TextField {...params} label={"Skills"} />}
+/>;
+```
+
+- `Autocomplete` componentidan foydalanish
+- `options={skills}` – skills massivini variantlar (options) sifatida beradi, ya'ni foydalanuvchi shu massiv ichidagi qiymatlardan tanlaydi.
+- `value={value}` – Hozirgi tanlangan qiymatni boshqaradi va `value` o‘zgaruvchisiga bog‘langan.
+- `onChange={(_, newValue: string | null) => setValue(newValue)}` – Foydalanuvchi yangi qiymat tanlaganda `setValue(newValue)` orqali valueni yangilaydi.
+- `newValue` – bu MUI Autocomplete komponenti tomonidan beriladigan ikkinchi parametr bo‘lib, foydalanuvchi tanlagan yangi qiymatni ifodalaydi.
+- `renderInput={(params) => <TextField {...params} label={"Skills"} />}` – Autocomplete ichidagi qidiruv inputi sifatida MUI TextField komponentini ishlatadi va unga "Skills" labelini beradi.
+
+```tsx
+<Autocomplete
+  options={skills}
+  value={value}
+  onChange={(_, newValue: string | null) => setValue(newValue)}
+  renderInput={(params) => <TextField {...params} label={"Skills"} />}
+  freeSolo
+/>
+```
+
+- `freeSolo` ning vazifasi shundaki, u foydalanuvchiga variantlar ro‘yxatidan tashqari ixtiyoriy matn kiritishga ruxsat beradi.
+- Agar `freeSolo` bo‘lmasa, foydalanuvchi faqat options={skills} massivida bor bo‘lgan qiymatlardan tanlashi mumkin.
+- Foydalanuvchi variantlardan tanlash yoki o‘z xohishicha matn kiritishi mumkin.
+- `newValue` tanlangan yoki kiritilgan matnga teng bo‘ladi.
+- Foydalanuvchi `Enter` bosganda, kiritilgan matn `value` sifatida saqlanadi.
