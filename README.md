@@ -948,3 +948,40 @@ console.log({ value });
 - Foydalanuvchi variantlardan tanlash yoki o‘z xohishicha matn kiritishi mumkin.
 - `newValue` tanlangan yoki kiritilgan matnga teng bo‘ladi.
 - Foydalanuvchi `Enter` bosganda, kiritilgan matn `value` sifatida saqlanadi.
+
+---
+
+## **📌 13-Dars Box**
+
+MUI'dagi `Box` komponenti `div` kabi ishlaydi, lekin `sx` prop orqali styling berish osonlashadi. U CSS Flexbox va Grid tizimlarini qo‘llab-quvvatlaydi va responsive dizayn yaratishda juda qulay.
+
+```tsx
+<Box component={"span"}>Codeevolution</Box>
+```
+
+- Box komponenti `div` kabidir lekin `component` atributi orqali uni boshqa html elementlari singari ishlatish mumkin
+
+```tsx
+<Box
+  sx={{
+    backgroundColor: "primary.main",
+    color: "white",
+    height: "100px",
+    width: "100px",
+    padding: "16px",
+    "&:hover": {
+      backgroundColor: "primary.light",
+    },
+  }}
+>
+  Codeevolution
+</Box>
+```
+
+- `Box` komponentiga `sx` orqali style berish
+
+```tsx
+<Box display={"flex"} height={"100px"} bgcolor={"success.light"} p={2}></Box>
+```
+
+- `Box` komponentida `CSS` stylelarini `atribut` sifatida ishlatish
