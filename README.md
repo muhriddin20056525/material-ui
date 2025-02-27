@@ -985,3 +985,41 @@ MUI'dagi `Box` komponenti `div` kabi ishlaydi, lekin `sx` prop orqali styling be
 ```
 
 - `Box` komponentida `CSS` stylelarini `atribut` sifatida ishlatish
+
+---
+
+## **📌 14-Dars Stack**
+
+MUI'dagi Stack komponenti flexbox asosida ishlaydi va uning yordamida elementlarni vertikal yoki gorizontal joylash mumkin. Asosan, row (qator) yoki column (ustun) ko'rinishida elementlarni tartibga solish uchun ishlatiladi.
+
+- `direction` – Joylashuv yo‘nalishini belgilaydi (row, column, row-reverse, column-reverse).
+- `spacing` – Elementlar orasidagi masofani belgilaydi.
+- `divider` – Elementlar orasiga ajratuvchi chiziq qo‘shish mumkin.
+- `alignItems` va justifyContent – Flexbox uslubida joylashuvni sozlash imkonini beradi.
+
+```tsx
+<Stack direction="row" spacing={2}>
+  <Button variant="contained">Button 1</Button>
+  <Button variant="contained">Button 2</Button>
+  <Button variant="contained">Button 3</Button>
+</Stack>
+```
+
+- `direction="row"` – Tugmalar qator bo‘lib joylashadi.
+- `spacing={2}` – Tugmalar orasidagi bo‘shliq o‘lchami 2 bo‘ladi.
+
+```tsx
+<Stack
+  direction="column"
+  spacing={2}
+  divider={<Divider orientation="vertical" flexItem />}
+>
+  <Typography variant="h6">Bo'lim 1</Typography>
+  <Typography variant="h6">Bo'lim 2</Typography>
+  <Typography variant="h6">Bo'lim 3</Typography>
+</Stack>
+```
+
+- `divider={<Divider />}` – Har bir element orasiga chiziq qo‘shadi.
+- `orientation="horizontal"` – Ajratgich gorizontal yo‘nalishda bo‘ladi.
+- `flexItem` – Ajratgich Stack ichidagi elementlarga moslashadi.
