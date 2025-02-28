@@ -1063,3 +1063,18 @@ MUI'dagi Grid komponenti CSS Flexbox asosida ishlaydigan responsive tartib tizim
 - `item` Bu Grid konteyner ichida joylashgan alohida blok.
 - `xs={12}` Kichik ekranlarda (mobil qurilmalar) butun kenglikni egallaydi.
 - `sm={6}` Katta ekranlarda (tablet yoki kompyuter) har bir qator 2 ta ustundan iborat bo‘ladi.
+
+---
+
+## **📌 16-Dars Paper**
+
+`Paper` – bu material dizayn asosidagi background va quti (container) vazifasini bajaruvchi komponent. U soya (elevation) va chegaralar (border-radius) bilan ajralib turadi, va odatda konteyner sifatida ishlatiladi.
+
+```tsx
+<Paper elevation={3} style={{ padding: 20 }}>
+  Bu MUI Paper komponenti
+</Paper>
+```
+
+- `elevation` – qanchalik soyali bo‘lishini belgilaydi (0–24 orasida).
+- `style` yoki `sx` – unga `o‘lcham` va `boshqa stil` berish uchun ishlatiladi.

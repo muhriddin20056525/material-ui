@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #eeeeee;
+}
+
 .app {
   padding: 4rem;
 }
