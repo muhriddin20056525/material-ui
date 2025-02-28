@@ -1023,3 +1023,43 @@ MUI'dagi Stack komponenti flexbox asosida ishlaydi va uning yordamida elementlar
 - `divider={<Divider />}` – Har bir element orasiga chiziq qo‘shadi.
 - `orientation="horizontal"` – Ajratgich gorizontal yo‘nalishda bo‘ladi.
 - `flexItem` – Ajratgich Stack ichidagi elementlarga moslashadi.
+
+---
+
+## **📌 15-Dars Grid**
+
+MUI'dagi Grid komponenti CSS Flexbox asosida ishlaydigan responsive tartib tizimini ta’minlaydi. U 12 ustunli tizimga ega bo‘lib, elementlarni moslashuvchan joylashtirishga yordam beradi. Grid ikki asosiy qismga bo‘linadi: container (ichidagi elementlarni joylashtiradi) va item (har bir tarmoq elementi). Bundan tashqari, breakpoint lar yordamida har xil ekran o‘lchamlariga mos keladigan tartib yaratish mumkin.
+
+```tsx
+<Grid container mt={4} columnSpacing={2} rowSpacing={4}>
+  <Grid item xs={12} sm={6}>
+    <Box bgcolor={"primary.light"} p={2}>
+      Item 1
+    </Box>
+  </Grid>
+  <Grid item xs={12} sm={6}>
+    <Box bgcolor={"primary.light"} p={2}>
+      Item 2
+    </Box>
+  </Grid>
+  <Grid item xs={12} sm={6}>
+    <Box bgcolor={"primary.light"} p={2}>
+      Item 3
+    </Box>
+  </Grid>
+  <Grid item xs={12} sm={6}>
+    <Box bgcolor={"primary.light"} p={2}>
+      Item 4
+    </Box>
+  </Grid>
+</Grid>
+```
+
+- `MUI Grid` komponentidan foydalanish
+- `container` Gridni asosiy konteyner sifatida belgilaydi.
+- `columnSpacing={2}`Har bir ustun o‘rtasida gorizontal 2 birlik (MUI spacing) masofa bo‘ladi.
+- `rowSpacing={4}` Har bir qator o‘rtasida vertikal 4 birlik masofa bo‘ladi.
+
+- `item` Bu Grid konteyner ichida joylashgan alohida blok.
+- `xs={12}` Kichik ekranlarda (mobil qurilmalar) butun kenglikni egallaydi.
+- `sm={6}` Katta ekranlarda (tablet yoki kompyuter) har bir qator 2 ta ustundan iborat bo‘ladi.
