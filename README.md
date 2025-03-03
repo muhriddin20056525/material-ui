@@ -1078,3 +1078,47 @@ MUI'dagi Grid komponenti CSS Flexbox asosida ishlaydigan responsive tartib tizim
 
 - `elevation` – qanchalik soyali bo‘lishini belgilaydi (0–24 orasida).
 - `style` yoki `sx` – unga `o‘lcham` va `boshqa stil` berish uchun ishlatiladi.
+
+---
+
+## **📌 17-Dars Card**
+
+MUI'dagi Card komponenti kontentni vizual ravishda ajratib ko‘rsatish uchun ishlatiladi. U rasm, matn, tugmalar kabi elementlarni ichiga olishi mumkin va joylashuvni tartibga solish uchun ishlatiladi.
+
+```tsx
+<Box width="300px">
+  <Card>
+    <CardMedia
+      component={"img"}
+      height={"140px"}
+      image="https://i.pinimg.com/736x/39/94/10/3994108472c6c7dac6d7072124edf5eb.jpg"
+      alt="image"
+    />
+    <CardContent>
+      <Typography gutterBottom variant="h5" component={"div"}>
+        React
+      </Typography>
+      <Typography variant="body2" color="text.secondary">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas dolor ad
+        inventore voluptates maiores tempore reiciendis dicta corrupti vel
+        animi!
+      </Typography>
+    </CardContent>
+    <CardActions>
+      <Button size="small">Share</Button>
+      <Button size="small">Learn More</Button>
+    </CardActions>
+  </Card>
+</Box>
+```
+
+- `<Box width="300px">` kartaning eni 300px qilib belgilanmoqda.
+- Card – MUI Card komponenti, u vizual ajratilgan blok yaratish uchun ishlatiladi.
+  - Ichiga rasm, matn va tugmalar qo‘shish mumkin.
+- `CardMedia` – kartochka ichiga `rasm` yoki `video` qo‘shish uchun ishlatiladi
+  - `component="img"` – bu img tegi sifatida ishlashini bildiradi.
+  - `height="140px"` – rasmning balandligi 140px qilib belgilanmoqda.
+  - `image="..."` – bu rasm manbasi (URL).
+  - `alt="image"` – ekranga chiqmasa, alternativ matn sifatida ko‘rsatiladi.
+- `CardContent` – kartaning matn qismi, u `title` va `description` qo‘shish uchun ishlatiladi.
+- `CardActions` – kartaning quyi qismi, u odatda `tugmalar` uchun ishlatiladi.
