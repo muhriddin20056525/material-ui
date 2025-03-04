@@ -1122,3 +1122,42 @@ MUI'dagi Card komponenti kontentni vizual ravishda ajratib ko‘rsatish uchun is
   - `alt="image"` – ekranga chiqmasa, alternativ matn sifatida ko‘rsatiladi.
 - `CardContent` – kartaning matn qismi, u `title` va `description` qo‘shish uchun ishlatiladi.
 - `CardActions` – kartaning quyi qismi, u odatda `tugmalar` uchun ishlatiladi.
+
+---
+
+## **📌 18-Dars Accordion**
+
+MUI (Material UI) dagi Accordion komponenti kontentni soddalashtirish va tartibga solish uchun ishlatiladi.
+
+- Interaktiv: Foydalanuvchi bosganda kengayadi va yopiladi.
+- Tartiblangan: Katta hajmdagi ma’lumotlarni qismlarga bo‘lib ko‘rsatish imkonini beradi.
+- Moslashuvchan: AccordionSummary, AccordionDetails va AccordionActions bilan boshqariladi.
+- Styling: MUI sxemalari bilan oson tarzda o‘zgartirilishi mumkin.
+
+```tsx
+<Accordion>
+  <AccordionSummary
+    id="panel1-header"
+    aria-controls="panel1-content"
+    expandIcon={<ExpandMoreIcon />}
+  >
+    <Typography>Accordion 1</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+      blanditiis. Veniam, voluptatum nobis perferendis voluptate ratione
+      similique consequatur, vel adipisci laboriosam commodi provident? Sunt
+      corrupti ut rerum modi temporibus dolores.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+```
+
+- `Accordion` — asosiy konteyner bo‘lib, u kengaytiriladigan bo‘limni o‘z ichiga oladi.
+- `AccordionSummary` — bu qism sarlavha (title) bo‘lib, foydalanuvchi shu qismga bosganda accordion ochiladi yoki yopiladi.
+- `expandIcon={<ExpandMoreIcon />}` — pastga yo‘naltirilgan ExpandMoreIcon (⬇️) belgisi, bosilganda accordionni ochish yoki yopish uchun ishlaydi.
+- `<Typography>Accordion 1</Typography>` — sarlavhada aks etadigan matn ("Accordion 1").
+
+- `AccordionDetails` — asosiy tarkib (content) joylashadigan joy.
+- Bu joyda accordion ochilganda ko‘rinadigan matn (Typography ichida yozilgan) joylashgan.
