@@ -8,8 +8,9 @@
 // import MuiRating from "./components/MuiRating";
 // import MuiSwitch from "./components/MuiSwitch";
 
-import MuiAccordion from "./components/MuiAccordion";
-import MuiCard from "./components/MuiCard";
+// import MuiAccordion from "./components/MuiAccordion";
+// import MuiCard from "./components/MuiCard";
+import MuiImageList from "./components/MuiImageList";
 
 // import MuiLayout from "./components/MuiLayout";
 
@@ -27,7 +28,8 @@ export default function App() {
       {/* <MuiAutocomplete /> */}
       {/* <MuiLayout /> */}
       {/* <MuiCard /> */}
-      <MuiAccordion />
+      {/* <MuiAccordion /> */}
+      <MuiImageList />
     </div>
   );
 }

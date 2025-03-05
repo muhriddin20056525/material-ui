@@ -1161,3 +1161,70 @@ MUI (Material UI) dagi Accordion komponenti kontentni soddalashtirish va tartibg
 
 - `AccordionDetails` — asosiy tarkib (content) joylashadigan joy.
 - Bu joyda accordion ochilganda ko‘rinadigan matn (Typography ichida yozilgan) joylashgan.
+
+---
+
+## **📌 19-Dars ImageList**
+
+`ImageList` – rasmlar galereyasini (grid formatida) ko'rsatish uchun ishlatiladigan komponent. Bu komponent rasmlarni turli o'lchamlarda va tartibda joylashtirish imkonini beradi.
+
+```tsx
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+
+const itemData = [
+  {
+    img: "https://source.unsplash.com/random/800x600",
+    title: "Nature",
+  },
+  {
+    img: "https://source.unsplash.com/random/800x601",
+    title: "City",
+  },
+  {
+    img: "https://source.unsplash.com/random/800x602",
+    title: "Mountains",
+  },
+];
+
+export default function Gallery() {
+  return (
+    <ImageList cols={3} gap={8}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img src={item.img} alt={item.title} loading="lazy" />
+        </ImageListItem>
+      ))}
+    </ImageList>
+  );
+}
+```
+
+- `ImageList cols={3}` 3 ta ustundan iborat grid yaratadi.
+- `gap={8}` rasm orasidagi bo'shliqni belgilaydi.
+- `ImageListItem` har bir rasm elementini ifodalaydi.
+- `loading="lazy"` rasm lazy loading rejimida yuklanadi (sahifani tezroq ochish uchun).
+
+```tsx
+<ImageList variant="woven" cols={3} gap={8}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img src={item.img} alt={item.title} loading="lazy" />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+- `variant="woven"` Agar siz rasm joylashuvini murakkabroq dizaynda chiqarishni istasangiz, `variant="woven"` opsiyasidan foydalanishingiz mumkin
+
+```tsx
+<ImageList variant="masonry" cols={3} gap={8}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img src={item.img} alt={item.title} loading="lazy" />
+    </ImageListItem>
+  ))}
+</ImageList>
+```
+
+- `variant="masonry"` Agar siz Pinterest uslubidagi notekis rasm joylashuvini xohlasangiz, masonry variantini ishlatishingiz mumkin
