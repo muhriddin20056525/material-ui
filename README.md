@@ -1228,3 +1228,47 @@ export default function Gallery() {
 ```
 
 - `variant="masonry"` Agar siz Pinterest uslubidagi notekis rasm joylashuvini xohlasangiz, masonry variantini ishlatishingiz mumkin
+
+---
+
+## **📌 20-Dars Navbar**
+
+```tsx
+<AppBar position="static">
+  <Toolbar>
+    <IconButton size="large" edge="start" color="inherit" aria-label="logo">
+      <CatchingPokemonIcon />
+    </IconButton>
+    <Typography variant="h6" component={"div"} sx={{ flexGrow: "1" }}>
+      POKEMONAPP
+    </Typography>
+
+    <Stack direction={"row"} spacing={2}>
+      <Button color="inherit">Features</Button>
+      <Button color="inherit">Prising</Button>
+      <Button color="inherit">About</Button>
+      <Button color="inherit">Login</Button>
+    </Stack>
+  </Toolbar>
+</AppBar>
+```
+
+- `AppBar position="static"` Bu Material-UI komponenti bo‘lib, u yuqori qismda navbar hosil qiladi.
+  - `position="static"` navbar sahifa skroll bo‘lsa ham o‘z joyida qoladi.
+- `Toolbar` Bu navbar ichidagi asosiy konteyner. Barcha elementlar `Toolbar` ichiga joylashtirilgan.
+- `IconButton` → tugma (button) ichida ikonka joylashtirish uchun ishlatiladi.
+- `size="large"` → kattaroq tugma.
+- `edge="start"` → ikonka chap tomonda joylashadi.
+- `color="inherit"` → tugmaning rangi `AppBar` ning rangini oladi.
+- `aria-label="logo"` → ekranni o‘qib beruvchi dasturlar uchun yordamchi atribut.
+- `<CatchingPokemonIcon />` → bu Material-UI Icons kutubxonasidan olingan Pokémon ilhomlantirilgan ikonka.
+
+- `Typography` → matn ko‘rinishida kontent qo‘shish uchun ishlatiladi.
+- `variant="h6"` → h6 hajmidagi sarlavha bo‘ladi.
+- `component={"div"}` → ushbu matn div sifatida ishlaydi.
+- `sx={{ flexGrow: "1" }}` → bu navbar ichida matn bo‘sh joyni to‘ldirishiga imkon beradi (chapdagi logodan o‘ng tugmalargacha bo‘shliq yaratadi).
+
+- `Stack` → komponentlar orasidagi joylashuvni boshqaradigan konteyner.
+- `direction={"row"}` → tugmalar yonma-yon (row) joylashadi.
+- `spacing={2}` → tugmalar orasida bo‘shliq (gap) 2 birlik.
+- `Button color="inherit"` → Button rangi `AppBar` dan meros oladi.
