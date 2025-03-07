@@ -1272,3 +1272,87 @@ export default function Gallery() {
 - `direction={"row"}` → tugmalar yonma-yon (row) joylashadi.
 - `spacing={2}` → tugmalar orasida bo‘shliq (gap) 2 birlik.
 - `Button color="inherit"` → Button rangi `AppBar` dan meros oladi.
+
+---
+
+## **📌 21-Dars Menu**
+
+```tsx
+import { Button, Menu, MenuItem } from "@mui/material";
+import { useState } from "react";
+
+export default function MuiMenu() {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  return (
+    <div>
+      <Button onClick={handleClick}>Menyuni ochish</Button>
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+        <MenuItem onClick={handleClose}>Variant 1</MenuItem>
+        <MenuItem onClick={handleClose}>Variant 2</MenuItem>
+        <MenuItem onClick={handleClose}>Variant 3</MenuItem>
+      </Menu>
+    </div>
+  );
+}
+```
+
+- `import { Button, Menu, MenuItem } from "@mui/material";`
+
+  - **Material UI (MUI)** kutubxonasidan **`Button`**, **`Menu`** va **`MenuItem`** komponentlari import qilinmoqda.
+  - **`Button`** → tugma komponenti.
+  - **`Menu`** → ochiluvchi menyu komponenti.
+  - **`MenuItem`** → menyu ichidagi har bir variant.
+
+- `import { useState } from "react";`
+
+  - **React**'ning `useState` hook-i import qilinmoqda.
+
+- `const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);`
+
+  - `anchorEl` → menyuning qaysi elementga bog‘langanligini saqlaydi (`HTMLElement` yoki `null`).
+  - `setAnchorEl` → menyuning holatini o‘zgartirish uchun ishlatiladi.
+  - `useState<null | HTMLElement>(null)` → dastlab `null` qiymati berilgan.
+
+- `const open = Boolean(anchorEl);`
+
+  - **Menyuning ochiq yoki yopiq ekanligini** bildiruvchi o‘zgaruvchi.
+  - `anchorEl` mavjud bo‘lsa (`true`), menyu ochiq, aks holda (`false`) yopiq bo‘ladi.
+
+- `const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => { setAnchorEl(event.currentTarget); };`
+
+  - **Tugma bosilganda menyuni ochish** funksiyasi.
+  - `setAnchorEl(event.currentTarget)` → bosilgan tugmani `anchorEl` sifatida belgilaydi.
+
+- `const handleClose = () => { setAnchorEl(null); };`
+
+  - **Menyuni yopish** funksiyasi.
+  - `setAnchorEl(null);` → menyuni yopish uchun `anchorEl` qiymatini `null` ga o‘zgartiradi.
+
+- `<Button onClick={handleClick}>Menyuni ochish</Button>`
+
+  - Tugma bosilganda `handleClick` funksiyasi chaqiriladi.
+
+- `<Menu anchorEl={anchorEl} open={open} onClose={handleClose}>...</Menu>`
+
+  - **Ochilib-yopiluvchi menyu** komponenti.
+  - `anchorEl={anchorEl}` → menyu qaysi elementga bog‘langanligini belgilaydi.
+  - `open={open}` → menyu ochiq yoki yopiq ekanligini bildiradi.
+  - `onClose={handleClose}` → menyuni yopish funksiyasini belgilaydi.
+
+- `<MenuItem onClick={handleClose}>Variant 1</MenuItem>`
+  - Menyudagi har bir variant.
+  - `onClick={handleClose}` → menyu bandi bosilganda menyuni yopadi.
+
+### **Natija:**
+
+- Tugma bosilganda menyu ochiladi.
+- Menyudagi variant bosilganda menyu yopiladi.

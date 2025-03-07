@@ -11,6 +11,7 @@
 // import MuiAccordion from "./components/MuiAccordion";
 // import MuiCard from "./components/MuiCard";
 // import MuiImageList from "./components/MuiImageList";
+import MuiMenu from "./components/MuiMenu";
 import MuiNavbar from "./components/MuiNavbar";
 
 // import MuiLayout from "./components/MuiLayout";
@@ -31,7 +32,8 @@ export default function App() {
       {/* <MuiCard /> */}
       {/* <MuiAccordion /> */}
       {/* <MuiImageList /> */}
-      <MuiNavbar />
+      {/* <MuiNavbar /> */}
+      <MuiMenu />
     </div>
   );
 }
