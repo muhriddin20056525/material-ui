@@ -1356,3 +1356,37 @@ export default function MuiMenu() {
 
 - Tugma bosilganda menyu ochiladi.
 - Menyudagi variant bosilganda menyu yopiladi.
+
+---
+
+## **📌 22-Dars Link**
+
+```tsx
+<Link href="#">Link</Link>
+```
+
+- oddiy `Link` yaratish
+
+```tsx
+<Link href="#" color="secondary">
+  Secondary
+</Link>
+```
+
+- `Link` ga rang berish
+
+```tsx
+<Link href="#" color="secondary" underline="hover">
+  Secondary
+</Link>
+```
+
+- **`underline="hover"`** Faqat sichqoncha ustiga olib kelganda **linkning osti chizilgan (underline) bo‘ladi**.
+
+```tsx
+<Link href="#" variant="h6">
+  Link
+</Link>
+```
+
+- **`variant="h6"`** → **Material UI** ichidagi **(`<h6>`) tagi** kabi ko‘rinishga ega bo‘ladi.
