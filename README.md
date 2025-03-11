@@ -1390,3 +1390,63 @@ export default function MuiMenu() {
 ```
 
 - **`variant="h6"`** → **Material UI** ichidagi **(`<h6>`) tagi** kabi ko‘rinishga ega bo‘ladi.
+
+---
+
+## **📌 23-Dars Breadcrumbs**
+
+```tsx
+<Breadcrumbs aria-label="breadcrumb">
+  <Link underline="hover" href="#">
+    Home
+  </Link>
+  <Link underline="hover" href="#">
+    Catalog
+  </Link>
+  <Link underline="hover" href="#">
+    Accessories
+  </Link>
+  <Typography color="text.primary">Shoes</Typography>
+</Breadcrumbs>
+```
+
+- `<Breadcrumbs>` — Material-UI komponenti bo‘lib, **breadcrumb navigatsiyasini** yaratish uchun ishlatiladi.
+- `<Link>` — Material-UI'dagi `<a>` tegiga o‘xshash link komponenti bo‘lib, `underline="hover"` orqali hover qilinganda tagiga chiziladi.
+- `<Typography>` — MUI'dagi matn ko‘rsatish uchun ishlatiladigan komponent.
+
+```tsx
+<Breadcrumbs aria-label="breadcrumb" separator="-"></Breadcrumbs>
+```
+
+- `separator="-"` — Standart `/` ajratuvchisi o‘rniga `-` belgisi ishlatiladi.
+
+```tsx
+<Breadcrumbs
+  aria-label="breadcrumb"
+  separator={<NavigateNext fontSize="small" />}
+></Breadcrumbs>
+```
+
+- `separator="-"` — Standart `/` ajratuvchisi o‘rniga `<NavigateNext fontSize="small" />` icon ishlatiladi.
+
+```tsx
+<Breadcrumbs
+  aria-label="breadcrumb"
+  separator={<NavigateNext fontSize="small" />}
+  maxItems={2}
+></Breadcrumbs>
+```
+
+- `maxItems={2}` — Ko‘rsatiladigan elementlar soni **2 tagacha cheklanadi**, ortiqcha elementlar `...` bilan qisqartiriladi.
+
+```tsx
+<Breadcrumbs
+  aria-label="breadcrumb"
+  separator={<NavigateNext fontSize="small" />}
+  maxItems={2}
+  itemsAfterCollapse={2}
+></Breadcrumbs>
+```
+
+- `itemsAfterCollapse={2}` — `Breadcrumb` qisqartirilganda, oxirgi 2 ta element doim ko‘rinishda qoladi.
+- Farqi: `maxItems={2}` faqat 2 ta elementni ko‘rsatadi, lekin `itemsAfterCollapse={2}` bilan `...` dan keyingi 2 element ochiq qoladi.
