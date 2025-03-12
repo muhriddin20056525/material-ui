@@ -12,6 +12,7 @@
 // import MuiCard from "./components/MuiCard";
 // import MuiImageList from "./components/MuiImageList";
 import MuiBreadcrumbs from "./components/MuiBreadcrumbs";
+import MuiDrawer from "./components/MuiDrawer";
 import MuiLink from "./components/MuiLink";
 import MuiMenu from "./components/MuiMenu";
 import MuiNavbar from "./components/MuiNavbar";
@@ -37,7 +38,8 @@ export default function App() {
       {/* <MuiNavbar /> */}
       {/* <MuiMenu /> */}
       {/* <MuiLink /> */}
-      <MuiBreadcrumbs />
+      {/* <MuiBreadcrumbs /> */}
+      <MuiDrawer />
     </div>
   );
 }

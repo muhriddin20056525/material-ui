@@ -1450,3 +1450,60 @@ export default function MuiMenu() {
 
 - `itemsAfterCollapse={2}` — `Breadcrumb` qisqartirilganda, oxirgi 2 ta element doim ko‘rinishda qoladi.
 - Farqi: `maxItems={2}` faqat 2 ta elementni ko‘rsatadi, lekin `itemsAfterCollapse={2}` bilan `...` dan keyingi 2 element ochiq qoladi.
+
+---
+
+## **📌 24-Dars Drawer**
+
+- **Drawer** — Material UI (`MUI`) da yon menyu (sidebar) yaratish uchun ishlatiladigan komponent.
+
+```tsx
+export default function MuiDrawer() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  return (
+    <>
+      <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        onClick={() => setIsDrawerOpen(true)}
+      >
+        <Menu />
+      </IconButton>
+      <Drawer
+        anchor="left"
+        open={isDrawerOpen}
+        onClick={() => setIsDrawerOpen(false)}
+      >
+        <Box p={2} width={"250px"} textAlign={"center"} role="presentation">
+          <Typography variant="h6" component={"div"}>
+            Side Panel
+          </Typography>
+        </Box>
+      </Drawer>
+    </>
+  );
+}
+```
+
+### **Material UI Drawer komponenti**
+
+- **`const [isDrawerOpen, setIsDrawerOpen] = useState(false);`**
+
+  - `isDrawerOpen` → **Drawer ochiq (`true`) yoki yopiq (`false`) ekanligini belgilaydi.**
+  - `setIsDrawerOpen(true)` → Drawer ochiladi.
+  - `setIsDrawerOpen(false)` → Drawer yopiladi.
+
+- **`<IconButton>`**
+
+  - **Material UI tugmachasi.**
+  - **`onClick={() => setIsDrawerOpen(true)}`** → Tugmaga bosilganda **Drawer ochiladi**.
+  - **`<Menu />`** → **Material UI `Menu` ikonkasi**.
+
+- **`<Drawer>`**
+
+  - **Sidebar komponenti**.
+  - **`anchor="left"`** → **Chap tomondan ochiladi**.
+  - **`open={isDrawerOpen}`** → `true` bo‘lsa, ochiq bo‘ladi.
+  - **`onClick={() => setIsDrawerOpen(false)}`** → Drawer ustiga bosilganda **yopiladi**.
