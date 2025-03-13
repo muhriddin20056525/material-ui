@@ -1507,3 +1507,47 @@ export default function MuiDrawer() {
   - **`anchor="left"`** → **Chap tomondan ochiladi**.
   - **`open={isDrawerOpen}`** → `true` bo‘lsa, ochiq bo‘ladi.
   - **`onClick={() => setIsDrawerOpen(false)}`** → Drawer ustiga bosilganda **yopiladi**.
+
+---
+
+## **📌 25-Dars Speed Dial**
+
+```tsx
+import { Edit, FileCopyOutlined, Print, Share } from "@mui/icons-material";
+import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
+
+export default function MuiSpeedDial() {
+  return (
+    <SpeedDial
+      ariaLabel="Navigation speed dial"
+      sx={{ position: "absolute", bottom: 16, right: 16 }}
+      icon={<SpeedDialIcon openIcon={<Edit />} />}
+    >
+      <SpeedDialAction
+        icon={<FileCopyOutlined />}
+        tooltipTitle="Copy"
+        tooltipOpen
+      />
+      <SpeedDialAction icon={<Print />} tooltipTitle="Print" tooltipOpen />
+      <SpeedDialAction icon={<Share />} tooltipTitle="Share" tooltipOpen />
+    </SpeedDial>
+  );
+}
+```
+
+- `<SpeedDial> `— Bu Material UI'dagi ochiluvchi tugmalar paneli.
+- `ariaLabel="Navigation speed dial"` — Ekran o‘quvchilar (Screen Reader) uchun tavsif.
+- `sx={{ position: "absolute", bottom: 16, right: 16 }}` — Tugma ekranning pastki o‘ng burchagiga joylashtirilgan.
+- `icon={<SpeedDialIcon openIcon={<Edit />} />}` —
+
+  - SpeedDialIcon — Asosiy tugma.
+  - openIcon={<Edit />} — Ochilganda Edit (✏) ikonkasi ko‘rinadi.
+
+- `<SpeedDialAction icon={<Print />} tooltipTitle="Print" tooltipOpen />`
+
+  - `icon={<Print />}` — Tugmada `"Print"` (chop etish) ikonka bor.
+  - `tooltipTitle="Print"` — Tooltip `"Print"` deb ko‘rsatiladi.
+
+- `SpeedDial` — Bir nechta harakat tugmalarini o‘z ichiga olgan ochiluvchi menyu.
+- `SpeedDialIcon` — Asosiy tugma bo‘lib, bosilganda menyuni ochadi.
+- `SpeedDialAction` — Harakatni bildiruvchi ikonka tugmalari.

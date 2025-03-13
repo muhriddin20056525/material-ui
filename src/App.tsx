@@ -7,15 +7,15 @@
 // import MuiAutocomplete from "./components/MuiAutocomplete";
 // import MuiRating from "./components/MuiRating";
 // import MuiSwitch from "./components/MuiSwitch";
-
 // import MuiAccordion from "./components/MuiAccordion";
 // import MuiCard from "./components/MuiCard";
 // import MuiImageList from "./components/MuiImageList";
-import MuiBreadcrumbs from "./components/MuiBreadcrumbs";
-import MuiDrawer from "./components/MuiDrawer";
-import MuiLink from "./components/MuiLink";
-import MuiMenu from "./components/MuiMenu";
-import MuiNavbar from "./components/MuiNavbar";
+// import MuiBreadcrumbs from "./components/MuiBreadcrumbs";
+// import MuiDrawer from "./components/MuiDrawer";
+// import MuiLink from "./components/MuiLink";
+// import MuiMenu from "./components/MuiMenu";
+// import MuiNavbar from "./components/MuiNavbar";
+import MuiSpeedDial from "./components/MuiSpeedDial";
 
 // import MuiLayout from "./components/MuiLayout";
 
@@ -39,7 +39,8 @@ export default function App() {
       {/* <MuiMenu /> */}
       {/* <MuiLink /> */}
       {/* <MuiBreadcrumbs /> */}
-      <MuiDrawer />
+      {/* <MuiDrawer /> */}
+      <MuiSpeedDial />
     </div>
   );
 }
