@@ -1551,3 +1551,38 @@ export default function MuiSpeedDial() {
 - `SpeedDial` — Bir nechta harakat tugmalarini o‘z ichiga olgan ochiluvchi menyu.
 - `SpeedDialIcon` — Asosiy tugma bo‘lib, bosilganda menyuni ochadi.
 - `SpeedDialAction` — Harakatni bildiruvchi ikonka tugmalari.
+
+---
+
+## **📌 26-Dars Bottom Navigation**
+
+```tsx
+import { Favorite, Home, Person } from "@mui/icons-material";
+import { BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { useState } from "react";
+
+export default function MuiBottomNavigation() {
+  const [value, setValue] = useState(0);
+
+  return (
+    <BottomNavigation
+      sx={{ width: "100%", position: "absolute", left: 0, bottom: 0 }}
+      value={value}
+      onChange={(_, newValue) => {
+        setValue(newValue);
+      }}
+      showLabels
+    >
+      <BottomNavigationAction label="Home" icon={<Home />} />
+      <BottomNavigationAction label="Favorite" icon={<Favorite />} />
+      <BottomNavigationAction label="Profile" icon={<Person />} />
+    </BottomNavigation>
+  );
+}
+```
+
+`BottomNavigation` va `BottomNavigationAction`
+Bu ikkita komponent Material UI (MUI) kutubxonasining Bottom `Navigation` tizimining asosiy qismlari bo‘lib, mobil ilovalardagi pastki navigatsiya panelini yaratish uchun ishlatiladi.
+
+- `BottomNavigation` - Bu komponent pastki `navigatsiya` uchun asosiy konteyner hisoblanadi va ichiga `BottomNavigationAction` tugmalarini joylashtirish mumkin.
+- `BottomNavigationAction` - Bu komponent har bir alohida tugmani yaratish uchun ishlatiladi.
