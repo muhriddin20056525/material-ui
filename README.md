@@ -1586,3 +1586,72 @@ Bu ikkita komponent Material UI (MUI) kutubxonasining Bottom `Navigation` tizimi
 
 - `BottomNavigation` - Bu komponent pastki `navigatsiya` uchun asosiy konteyner hisoblanadi va ichiga `BottomNavigationAction` tugmalarini joylashtirish mumkin.
 - `BottomNavigationAction` - Bu komponent har bir alohida tugmani yaratish uchun ishlatiladi.
+
+---
+
+## **📌 27-Dars Avatar**
+
+```tsx
+import { Avatar } from "@mui/material";
+<Avatar>BW</Avatar>;
+```
+
+- `Avatar` hosil qilish
+
+```tsx
+<Avatar sx={{ bgcolor: "primary.light" }}>BW</Avatar>
+```
+
+- `bgColor` - berish
+
+```tsx
+<Avatar
+  src="https://i.pinimg.com/736x/fe/8a/f2/fe8af205003607f12f922a62db6f1a1f.jpg"
+  alt="Wang Ling"
+/>
+```
+
+- `Avatar` ga rasm yuklash
+
+```tsx
+<AvatarGroup>
+  <Avatar sx={{ bgcolor: "primary.light" }}>BW</Avatar>
+  <Avatar sx={{ bgcolor: "success.light" }}>CK</Avatar>
+  <Avatar
+    src="https://i.pinimg.com/736x/fe/8a/f2/fe8af205003607f12f922a62db6f1a1f.jpg"
+    alt="Wang Ling"
+  />
+
+  <Avatar
+    src="https://i.pinimg.com/736x/2c/43/3f/2c433f9e7a6a295169c4382c9b25c836.jpg"
+    alt="Au Bin"
+  />
+</AvatarGroup>
+```
+
+- Bir nechta avatarlar guruhini yaratish bu vaziyatda avatarlar bir birga tegib hatta bir birining chegarasiga kiradi
+
+```tsx
+<Avatar sx={{ bgcolor: "primary.light", width: 48, height: 48 }}>BW</Avatar>
+```
+
+- `Avatar` ga `width` va `height` berish
+
+```tsx
+<Avatar
+  variant="square"
+  sx={{ bgcolor: "primary.light", width: 48, height: 48 }}
+>
+  BW
+</Avatar>
+<Avatar
+  variant="rounded"
+  sx={{ bgcolor: "success.light", width: 48, height: 48 }}
+>
+  CK
+</Avatar>
+```
+
+- `Avatar` ga variant berish
+  - `square` - to'rtburchak avatar
+  - `rounded` - border-radiusga ega avatar
