@@ -16,6 +16,7 @@
 // import MuiMenu from "./components/MuiMenu";
 // import MuiNavbar from "./components/MuiNavbar";
 import MuiAvatar from "./components/MuiAvatar";
+import MuiBadge from "./components/MuiBadge";
 import MuiBottomNavigation from "./components/MuiBottomNavigation";
 import MuiSpeedDial from "./components/MuiSpeedDial";
 
@@ -44,7 +45,8 @@ export default function App() {
       {/* <MuiDrawer /> */}
       {/* <MuiSpeedDial /> */}
       {/* <MuiBottomNavigation /> */}
-      <MuiAvatar />
+      {/* <MuiAvatar /> */}
+      <MuiBadge />
     </div>
   );
 }

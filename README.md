@@ -14,6 +14,23 @@
 
 ---
 
+# **Mundarija**
+
+| Nomi                                                            | Havola                         |
+| --------------------------------------------------------------- | ------------------------------ |
+| [1-dars React va Material UI ni o'rnatish][1-dars]              | [2-dars Typography][2-dars]    |
+| [3-dars Buttons][3-dars]                                        | [4-dars ButtonGroup][4-dars]   |
+| [5-Dars ToggleButtonGroup - Matn formatlash komponenti][5-dars] | [6-Dars MUI TextField][6-dars] |
+
+[1-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-1-dars-react-va-material-ui-ni-ornatish
+[2-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-2-dars-typography
+[3-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-3-dars-buttons
+[4-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-4-dars-buttongroup
+[5-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-5-dars-togglebuttongroup---matn-formatlash-komponenti
+[6-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-6-dars-mui-textfield
+
+---
+
 ## **📌 1-dars React va Material UI ni o'rnatish**
 
 ```bash
@@ -1655,3 +1672,54 @@ import { Avatar } from "@mui/material";
 - `Avatar` ga variant berish
   - `square` - to'rtburchak avatar
   - `rounded` - border-radiusga ega avatar
+
+---
+
+## **📌 27-Dars Badge**
+
+Material UI (MUI) da Badge — bu komponent yoki ikonkaning ustiga qo‘yiladigan belgi bo‘lib, odatda xabarlar soni, bildirishnomalar yoki boshqa qo‘shimcha ma’lumotlarni ko‘rsatish uchun ishlatiladi.
+
+**Oddiy Badge (5 ta xabar bilan)**
+
+```tsx
+<Badge badgeContent={5} color="primary">
+  <Mail />
+</Badge>
+```
+
+- `"primary"` rangda 5 ta xabar borligini ko‘rsatadi.
+- `Mail` ikonkasi ustida `ko‘k rangli` belgi chiqadi.
+
+**showZero bilan 0 ta xabarni ham ko‘rsatish**
+
+```tsx
+<Badge badgeContent={0} color="secondary" showZero>
+  <Mail />
+</Badge>
+```
+
+- Agar `showZero` bo‘lmasa, `badgeContent={0}` bo‘lsa belgi umuman ko‘rinmaydi.
+- `showZero` bo‘lsa, `0` raqami bilan belgi ko‘rinadi.
+
+**max bilan maksimal qiymatni belgilash**
+
+```tsx
+<Badge badgeContent={100} max={999} color="secondary" showZero>
+  <Mail />
+</Badge>
+```
+
+- `badgeContent={100}` → 100 ta bildirishnoma borligini ko‘rsatadi.
+- `max={999}` → Agar qiymat `999` dan katta bo‘lsa, `999+` tarzida chiqaradi.
+- `showZero` bor, lekin `badgeContent={100}` bo‘lgani uchun `0` ko‘rinmaydi.
+
+**variant="dot" bilan faqat nuqta chiqarish**
+
+```tsx
+<Badge variant="dot" color="secondary">
+  <Mail />
+</Badge>
+```
+
+- `variant="dot"` → raqam chiqmaydi, faqat kichik nuqta ko‘rinadi.
+- Bu usul odatda xabar borligini bildiradi, lekin soni muhim bo‘lmaganda ishlatiladi.
