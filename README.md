@@ -1723,3 +1723,99 @@ Material UI (MUI) da Badge — bu komponent yoki ikonkaning ustiga qo‘yiladiga
 
 - `variant="dot"` → raqam chiqmaydi, faqat kichik nuqta ko‘rinadi.
 - Bu usul odatda xabar borligini bildiradi, lekin soni muhim bo‘lmaganda ishlatiladi.
+
+---
+
+## **📌 28-Dars List**
+
+```tsx
+<List>
+  <ListItem>
+    <ListItemText primary="List item 1" />
+  </ListItem>
+
+  <ListItem>
+    <ListItemText primary="List item 2" />
+  </ListItem>
+
+  <ListItem>
+    <ListItemText primary="List item 3" />
+  </ListItem>
+</List>
+```
+
+- `List` — Material UI'dagi ro‘yxat komponenti bo‘lib, u ichida elementlarni (ListItem) saqlash uchun ishlatiladi.
+- `ListItem` har bir ro‘yxat elementi (li tegiga o‘xshaydi).
+- U ichida matn yoki boshqa elementlarni joylashtirish mumkin.
+- `ListItemText` ro‘yxat elementining matn qismini ko‘rsatadi.
+- `primary` prop'iga berilgan qiymat ro‘yxat elementining asosiy matni sifatida chiqariladi.
+
+```tsx
+<List>
+  <ListItem>
+    <ListItemIcon>
+      <Mail />
+    </ListItemIcon>
+    <ListItemText primary="List item 1" />
+  </ListItem>
+</List>
+```
+
+- `ListItemIcon` `ListItemText` ning chap tomoniga icon yuklash uchun ishlatiladi
+
+```tsx
+<ListItem>
+  <ListItemIcon>
+    <ListItemAvatar>
+      <Avatar>
+        <Mail />
+      </Avatar>
+    </ListItemAvatar>
+  </ListItemIcon>
+  <ListItemText primary="List item 1" />
+</ListItem>
+```
+
+- `<ListItemAvatar>`
+  - Bu ro‘yxat elementining oldiga avatar (dumaloq rasm) qo‘yish uchun ishlatiladi.
+  - Avatar odatda profil rasmi yoki belgi uchun ishlatiladi.
+- `<Avatar>`
+  - Avatar ichida ikonka yoki rasm bo‘lishi mumkin.
+  - Ushbu kodda `<Mail />` (Material UI'dagi Mail ikonasi) avatar ichida joylashgan.
+
+```tsx
+<ListItem>
+  <ListItemIcon>
+    <ListItemAvatar>
+      <Avatar>
+        <Mail />
+      </Avatar>
+    </ListItemAvatar>
+  </ListItemIcon>
+  <ListItemText primary="List item 3" secondary="Secondary text" />
+</ListItem>
+```
+
+- `<ListItemText>` — Ro‘yxat matni
+  - `primary="List item 3"` → Asosiy matn sifatida "List item 3" chiqadi.
+  - `secondary="Secondary text"` → Qo‘shimcha matn sifatida "Secondary text" chiqadi va u asosiy textning pastida joylashadi
+
+```tsx
+<ListItem disablePadding>
+  <ListItemButton>
+    <ListItemIcon>
+      <ListItemAvatar>
+        <Avatar>
+          <Mail />
+        </Avatar>
+      </ListItemAvatar>
+    </ListItemIcon>
+    <ListItemText primary="List item 1" secondary="Secondary text" />
+  </ListItemButton>
+</ListItem>
+```
+
+- `<ListItemButton>` — Bosilishi mumkin bo‘lgan element
+  - `ListItemButton` — bu Material UI'dagi klik qilinadigan ro‘yxat elementi.
+  - Uni `<ListItem>` ichida ishlatish, UI'da butun maydonni bosish imkonini beradi (faqat ikonka yoki matn emas).
+- `disablePadding` bosiladigan element passing orqali boshqalardan ajratilib turiladi agar `disablePadding` `ListItem` ga qo'shilsa bu padding olib tashlanadi
