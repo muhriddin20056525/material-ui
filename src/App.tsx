@@ -15,13 +15,13 @@
 // import MuiLink from "./components/MuiLink";
 // import MuiMenu from "./components/MuiMenu";
 // import MuiNavbar from "./components/MuiNavbar";
-import MuiAvatar from "./components/MuiAvatar";
-import MuiBadge from "./components/MuiBadge";
-import MuiBottomNavigation from "./components/MuiBottomNavigation";
-import MuiList from "./components/MuiList";
-import MuiSpeedDial from "./components/MuiSpeedDial";
-
+// import MuiAvatar from "./components/MuiAvatar";
+// import MuiBadge from "./components/MuiBadge";
+// import MuiBottomNavigation from "./components/MuiBottomNavigation";
+// import MuiList from "./components/MuiList";
+// import MuiSpeedDial from "./components/MuiSpeedDial";
 // import MuiLayout from "./components/MuiLayout";
+import MuiChip from "./components/MuiChip";
 
 export default function App() {
   return (
@@ -48,7 +48,8 @@ export default function App() {
       {/* <MuiBottomNavigation /> */}
       {/* <MuiAvatar /> */}
       {/* <MuiBadge /> */}
-      <MuiList />
+      {/* <MuiList /> */}
+      <MuiChip />
     </div>
   );
 }

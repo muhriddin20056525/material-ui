@@ -1819,3 +1819,83 @@ Material UI (MUI) da Badge — bu komponent yoki ikonkaning ustiga qo‘yiladiga
   - `ListItemButton` — bu Material UI'dagi klik qilinadigan ro‘yxat elementi.
   - Uni `<ListItem>` ichida ishlatish, UI'da butun maydonni bosish imkonini beradi (faqat ikonka yoki matn emas).
 - `disablePadding` bosiladigan element passing orqali boshqalardan ajratilib turiladi agar `disablePadding` `ListItem` ga qo'shilsa bu padding olib tashlanadi
+
+---
+
+## **📌 29-Dars Chip**
+
+Material UI (MUI) da Chip – kichik, kompakt element bo‘lib, u foydalanuvchiga `teglar`, `toifalar` yoki boshqa `kichik ma’lumotlarni` ko‘rsatish uchun ishlatiladi. Chip komponenti odatda quyidagi maqsadlarda ishlatiladi:
+
+- `Teglar (tags)` – Masalan, postlarga teg qo‘shish.
+- `Tanlov (selection)` – Bir nechta variant ichidan tanlangan elementlarni ko‘rsatish.
+- `Kontaktlar (contacts)` – Profil yoki avatar bilan qisqa ma’lumot ko‘rsatish.
+- `Harakat tugmalari` – Chip ichiga o‘chirish yoki interaktiv tugmalar qo‘shish.
+
+```tsx
+<Chip label="Chip" color="primary" />
+```
+
+- `Chip` komponentini yaratish va unga `rang` berish
+
+```tsx
+<Chip label="Chip" color="primary" size="small" />
+```
+
+- `Chip` komponentiga o'lcham berish
+
+```tsx
+<Chip label="Chip" color="secondary" size="small" variant="outlined" />
+```
+
+- `Chip` komponentiga `variant` berish
+
+```tsx
+<Chip
+  label="Chip"
+  color="secondary"
+  size="small"
+  variant="outlined"
+  avatar={<Avatar>V</Avatar>}
+/>
+```
+
+- `Chip` komponentiga `Avatar` komponenti orqali uning chap tomoniga avatar qo'shish
+
+```tsx
+<Chip label="Chip" color="primary" size="small" icon={<Face />} />
+```
+
+- `Chip` komponentining chap tomoniga icon qo'shish
+
+```tsx
+<Chip label="Click" color="success" onClick={() => alert("click")} />
+```
+
+- `Chip` komponentiga `onClick` qo'shish
+
+```tsx
+<Chip
+  label="Label"
+  color="error"
+  onClick={() => alert("click")}
+  onDelete={() => alert("Delete handler")}
+/>
+```
+
+`onDelete` – Chip ustidagi o‘chirish tugmasi (`×`) bosilganda ishlaydi.
+
+```tsx
+const [chips, setChips] = useState(["Chip1", "Chip2", "Chip3"]);
+
+const handleDelete = (chipToDelete: string) => {
+  setChips((chips) => chips.filter((chip) => chip !== chipToDelete));
+};
+
+{
+  chips.map((chip) => (
+    <Chip key={chip} label={chip} onDelete={() => handleDelete(chip)} />
+  ));
+}
+```
+
+- `Arraydan` malumot olib uni `chip` ga interatsiya qilish va `onDelete` orqali har bir `chip` komponetiga o'chirish tugmasi (`x`) ni qo'shish va u bosilganda o'chirish
