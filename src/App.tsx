@@ -21,7 +21,9 @@
 // import MuiList from "./components/MuiList";
 // import MuiSpeedDial from "./components/MuiSpeedDial";
 // import MuiLayout from "./components/MuiLayout";
-import MuiChip from "./components/MuiChip";
+// import MuiChip from "./components/MuiChip";
+
+import MuiToolTip from "./components/MuiToolTip";
 
 export default function App() {
   return (
@@ -49,7 +51,8 @@ export default function App() {
       {/* <MuiAvatar /> */}
       {/* <MuiBadge /> */}
       {/* <MuiList /> */}
-      <MuiChip />
+      {/* <MuiChip /> */}
+      <MuiToolTip />
     </div>
   );
 }

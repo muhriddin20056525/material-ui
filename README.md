@@ -1899,3 +1899,38 @@ const handleDelete = (chipToDelete: string) => {
 ```
 
 - `Arraydan` malumot olib uni `chip` ga interatsiya qilish va `onDelete` orqali har bir `chip` komponetiga o'chirish tugmasi (`x`) ni qo'shish va u bosilganda o'chirish
+
+---
+
+## **📌 30-Dars Tooltip**
+
+`Material UI` dagi `Tooltip` komponenti foydalanuvchiga sichqoncha bilan ustiga borganida (`hover`), bosganda (`click`) yoki fokuslanganda (`focus`) qo‘shimcha ma’lumot berish uchun ishlatiladi.
+
+```tsx
+<Tooltip title="Delete" placement="right">
+  <IconButton>
+    <Delete />
+  </IconButton>
+</Tooltip>
+```
+
+- `title="Delete"` → Tooltip ichidagi matn, ya'ni foydalanuvchi ikonka ustiga kelsa `"Delete"` yozuvi chiqadi.
+- `placement="right"` → Tooltip ikonkaning o‘ng tomonida chiqadi.
+
+```tsx
+<Tooltip
+  title="Delete"
+  placement="right"
+  arrow
+  enterDelay={500}
+  leaveDelay={200}
+>
+  <IconButton>
+    <Delete />
+  </IconButton>
+</Tooltip>
+```
+
+- `arrow` → Tooltipga o‘qcha (arrow) qo‘shadi.
+- `enterDelay={500}` → Tooltip sichqoncha ikonka ustiga kelgandan 500ms (0.5 soniya) keyin chiqadi.
+- `leaveDelay={200}` → Sichqoncha ikonka ustidan ketgandan 200ms (0.2 soniya) keyin tooltip yashirinadi.
