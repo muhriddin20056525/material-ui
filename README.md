@@ -1934,3 +1934,57 @@ const handleDelete = (chipToDelete: string) => {
 - `arrow` → Tooltipga o‘qcha (arrow) qo‘shadi.
 - `enterDelay={500}` → Tooltip sichqoncha ikonka ustiga kelgandan 500ms (0.5 soniya) keyin chiqadi.
 - `leaveDelay={200}` → Sichqoncha ikonka ustidan ketgandan 200ms (0.2 soniya) keyin tooltip yashirinadi.
+
+---
+
+## **📌 31-Dars Tables**
+
+```tsx
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
+
+export default function MuiTable() {
+  return (
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ID</TableCell>
+            <TableCell>First Name</TableCell>
+            <TableCell>Last Name</TableCell>
+            <TableCell align="center">Email</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {tableData.map((row) => (
+            <TableRow
+              key={row.id}
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell>{row.id}</TableCell>
+              <TableCell>{row.first_name}</TableCell>
+              <TableCell>{row.last_name}</TableCell>
+              <TableCell align="center">{row.email}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+```
+
+- `TableContainer` → Jadvalni sarlavha (header), qatorlar (rows) va ustunlar (cells) bilan birga o‘rab turuvchi konteyner.
+- `Table` → Jadvalni yaratish uchun asosiy komponent.
+- `TableHead` → Jadvalning sarlavha qismi (thead).
+- `TableBody` → Jadvalning asosiy qismi (tbody).
+- `TableRow` → Jadvaldagi har bir qator (tr).
+- `TableCell` → Jadvaldagi har bir ustun (td).
+- `Paper` → Material UI'dagi stil bilan qoplangan qog‘oz effekti beruvchi komponent

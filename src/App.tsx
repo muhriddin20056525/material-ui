@@ -23,7 +23,8 @@
 // import MuiLayout from "./components/MuiLayout";
 // import MuiChip from "./components/MuiChip";
 
-import MuiToolTip from "./components/MuiToolTip";
+import MuiTable from "./components/MuiTable";
+// import MuiToolTip from "./components/MuiToolTip";
 
 export default function App() {
   return (
@@ -52,7 +53,8 @@ export default function App() {
       {/* <MuiBadge /> */}
       {/* <MuiList /> */}
       {/* <MuiChip /> */}
-      <MuiToolTip />
+      {/* <MuiToolTip /> */}
+      <MuiTable />
     </div>
   );
 }
