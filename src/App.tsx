@@ -24,8 +24,9 @@
 // import MuiChip from "./components/MuiChip";
 // import MuiTable from "./components/MuiTable";
 // import MuiToolTip from "./components/MuiToolTip";
+// import MuiAlert from "./components/MuiAlert";
 
-import MuiAlert from "./components/MuiAlert";
+import MuiSnackbar from "./components/MuiSnackbar";
 
 export default function App() {
   return (
@@ -56,7 +57,8 @@ export default function App() {
       {/* <MuiChip /> */}
       {/* <MuiToolTip /> */}
       {/* <MuiTable /> */}
-      <MuiAlert />
+      {/* <MuiAlert /> */}
+      <MuiSnackbar />
     </div>
   );
 }

@@ -2081,3 +2081,58 @@ export default function MuiTable() {
 ```
 
 - `Alert` ning o'ng tomoniga `action button` qo'shish
+
+---
+
+## **📌 33-Dars Snackbar**
+
+`MUI (Material-UI) Snackbar` — bu foydalanuvchiga vaqtinchalik xabar ko'rsatish uchun ishlatiladigan komponent. Odatda, u ekranning pastki qismida chiqadi va bir necha soniyadan so‘ng avtomatik ravishda yo‘qoladi.
+
+```tsx
+import { Button, Snackbar } from "@mui/material";
+import { useState } from "react";
+
+export default function MuiSnackbar() {
+  const [open, setOpen] = useState(false);
+
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Submit</Button>
+      <Snackbar
+        message={"Form submitted successfully"}
+        autoHideDuration={4000}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+      />
+    </>
+  );
+}
+```
+
+- `useState(false)` — open nomli state yaratilyapti. U Snackbar ochiq (`true`) yoki yopiq (`false`) ekanligini boshqaradi.
+- `setOpen` — `open` holatini o‘zgartirish uchun ishlatiladigan funksiya.
+- `handleClose` — Snackbar'ni yopish uchun ishlatiladi.
+- `reason` — agar Snackbar tashqarisini bosish sababli yopilsa (clickaway), u yopilmaydi.
+- `setOpen(false)` — Snackbar'ni yopadi.
+
+- `onClick={() => setOpen(true)}` – tugmaga bosilganda Snackbar ochiladi.
+- `message="Form submitted successfully"` – Snackbar ichida ko‘rinadigan matn.
+- `autoHideDuration={4000}` – Snackbar 4 soniya (4000ms) dan keyin avtomatik yo‘qoladi.
+- `open={open}` – agar open === true bo‘lsa, Snackbar ko‘rinadi.
+- `onClose={handleClose}` – Snackbar yopilganda handleClose chaqiriladi.
+- `anchorOrigin={{ vertical: "bottom", horizontal: "center" }}` – Snackbar ekranning pastki markazida chiqadi.
