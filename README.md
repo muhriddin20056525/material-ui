@@ -1988,3 +1988,96 @@ export default function MuiTable() {
 - `TableRow` → Jadvaldagi har bir qator (tr).
 - `TableCell` → Jadvaldagi har bir ustun (td).
 - `Paper` → Material UI'dagi stil bilan qoplangan qog‘oz effekti beruvchi komponent
+
+---
+
+## **📌 32-Dars Alert**
+
+`Alert` — bu Material UI kutubxonasidagi tayyor komponent bo‘lib, foydalanuvchilarga xabar yoki bildirishnoma ko‘rsatish uchun ishlatiladi. U xato (`error`), ogohlantirish (`warning`), axborot (`info`) va muvaffaqiyat (`success`) kabi holatlarni bildirishi mumkin. Vizual jihatdan turli ranglarda chiqadi: qizil (xato), sariq (ogohlantirish), ko‘k (axborot) va yashil (muvaffaqiyat). `Alert` odatda foydalanuvchini ogohlantirish yoki muhim ma’lumot berish uchun ishlatiladi.
+
+```tsx
+<Stack spacing={2}>
+  <Alert severity="error">This is error alert</Alert>
+  <Alert severity="warning">This is warning alert</Alert>
+  <Alert severity="info">This is info alert</Alert>
+  <Alert severity="success">This is success alert</Alert>
+</Stack>
+```
+
+- `Alert` - bu MUI komponenti bo‘lib, foydalanuvchilarga xabar ko‘rsatish uchun ishlatiladi.
+- `severity` (Alert turini belgilaydi)
+  - `"error"` → Qizil rangda chiqadi, xato haqida xabar beradi.
+  - `"warning"` → Sariq rangda chiqadi, ogohlantirish uchun ishlatiladi.
+  - `"info"` → Moviy rangda chiqadi, axborot berish uchun ishlatiladi.
+  - `"success"` → Yashil rangda chiqadi, muvaffaqiyat haqida xabar beradi.
+
+```tsx
+<Alert variant="outlined" severity="error">
+  This is error alert
+</Alert>
+<Alert variant="outlined" severity="warning">
+  This is warning alert
+</Alert>
+<Alert variant="outlined" severity="info">
+  This is info alert
+</Alert>
+<Alert variant="outlined" severity="success">
+  This is success alert
+</Alert>
+```
+
+- `variant="outlined"` → Bu Alert elementining tashqi chizilgan chegarasi bo‘lishini bildiradi.
+- Ichidagi matn foydalanuvchiga ko‘rsatadigan xabar hisoblanadi.
+
+```tsx
+<Alert variant="filled" severity="error">
+  This is error alert
+</Alert>
+<Alert variant="filled" severity="warning">
+  This is warning alert
+</Alert>
+<Alert variant="filled" severity="info">
+  This is info alert
+</Alert>
+<Alert variant="filled" severity="success">
+  This is success alert
+</Alert>
+```
+
+- `variant="filled"` → Xabar butunlay to‘liq rangli fon bilan chiqadi.
+
+```tsx
+<Alert variant="filled" severity="error">
+  <AlertTitle>Error</AlertTitle>
+  This is error alert
+</Alert>
+```
+
+- `<AlertTitle>Error</AlertTitle>` → Alertga Title qo'shish
+
+```tsx
+<Alert variant="filled" severity="success" icon={<Check />}>
+  <AlertTitle>success</AlertTitle>
+  This is success alert
+</Alert>
+```
+
+- `icon={<Check />}` → Aletga icon qo'shish
+
+```tsx
+<Alert
+  variant="filled"
+  severity="success"
+  icon={<Check />}
+  action={
+    <Button color="inherit" size="small">
+      UNDO
+    </Button>
+  }
+>
+  <AlertTitle>success</AlertTitle>
+  This is success alert
+</Alert>
+```
+
+- `Alert` ning o'ng tomoniga `action button` qo'shish
