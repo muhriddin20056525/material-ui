@@ -2136,3 +2136,146 @@ export default function MuiSnackbar() {
 - `open={open}` – agar open === true bo‘lsa, Snackbar ko‘rinadi.
 - `onClose={handleClose}` – Snackbar yopilganda handleClose chaqiriladi.
 - `anchorOrigin={{ vertical: "bottom", horizontal: "center" }}` – Snackbar ekranning pastki markazida chiqadi.
+
+---
+
+## **📌 34-Dars Dialog**
+
+`Dialog komponenti` – bu modallarni yaratish uchun ishlatiladigan komponent. U foydalanuvchiga maxsus ma’lumot yoki tanlovlar taqdim etish uchun ekranning ustki qatlamida paydo bo‘ladi.
+
+```tsx
+export default function MuiDialog() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button variant="contained" onClick={() => setOpen(true)}>
+        Open Dialog
+      </Button>
+
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <DialogTitle>Submit the test</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Are your sure you want to submit the test? You will not be able to
+            edit after submitting
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpen(false)}>Cancel</Button>
+          <Button autoFocus>Submit</Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+}
+```
+
+**Kod izohi**
+
+Quyidagi kodda **Modal (Dialog)** oynasini yaratish va boshqarish jarayoni tushuntirilgan.
+
+```tsx
+import * as React from "react";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
+} from "@mui/material";
+import { useState } from "react";
+
+export default function MuiDialog() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button variant="contained" onClick={() => setOpen(true)}>
+        Open Dialog
+      </Button>
+
+      <Dialog open={open} onClose={() => setOpen(false)}>
+        <DialogTitle>Submit the test</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Are you sure you want to submit the test? You will not be able to
+            edit after submitting.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpen(false)}>Cancel</Button>
+          <Button autoFocus>Submit</Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+}
+```
+
+**State (`open`) yaratish**
+
+```tsx
+const [open, setOpen] = useState(false);
+```
+
+- `useState(false)` – boshlang‘ich qiymati `false`, ya'ni modal yopiq.
+- `open` – **modalning holatini saqlaydi** (ochiq yoki yopiq).
+- `setOpen` – **holatni o‘zgartirish uchun funksiya**.
+
+**Dialogni ochish tugmasi**
+
+```tsx
+<Button variant="contained" onClick={() => setOpen(true)}>
+  Open Dialog
+</Button>
+```
+
+- `variant="contained"` – Material UI tugma uslubi (fon bilan chiqariladi).
+- `onClick={() => setOpen(true)}` – tugmaga bosilganda `open = true` bo‘ladi va modal ochiladi.
+
+**Dialog komponenti**
+
+```tsx
+<Dialog open={open} onClose={() => setOpen(false)}>
+```
+
+- `open={open}` – **`open` true bo‘lsa, modal ochiladi**.
+- `onClose={() => setOpen(false)}` – **modal yopilganda** `open = false` bo‘ladi.
+
+**Dialog sarlavhasi (`DialogTitle`)**
+
+```tsx
+<DialogTitle>Submit the test</DialogTitle>
+```
+
+- Modaldagi **sarlavha** ko‘rsatiladi.
+
+**Dialog matni (`DialogContent`)**
+
+```tsx
+<DialogContent>
+  <DialogContentText>
+    Are you sure you want to submit the test? You will not be able to edit after
+    submitting.
+  </DialogContentText>
+</DialogContent>
+```
+
+- `DialogContent` – modaldagi asosiy **matn qismi**.
+- `DialogContentText` – **sahifa accessibility** uchun `<p>` sifatida ko‘rsatiladi.
+
+**Amallar (`DialogActions`)**
+
+```tsx
+<DialogActions>
+  <Button onClick={() => setOpen(false)}>Cancel</Button>
+  <Button autoFocus>Submit</Button>
+</DialogActions>
+```
+
+- `DialogActions` – **Modal pastki qismidagi tugmalar**.
+- `Cancel` tugmasi – **modalni yopadi** (`open = false`).
+- `Submit` tugmasi – **hozircha hech qanday harakat bajarmaydi**.
+- `autoFocus` – **dialog ochilganda avtomatik ravishda ushbu tugmaga fokus tushadi**.
