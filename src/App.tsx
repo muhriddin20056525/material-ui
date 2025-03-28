@@ -28,6 +28,7 @@
 // import MuiSnackbar from "./components/MuiSnackbar";
 
 import MuiDialog from "./components/MuiDialog";
+import MuiProgress from "./components/MuiProgress";
 
 export default function App() {
   return (
@@ -60,7 +61,8 @@ export default function App() {
       {/* <MuiTable /> */}
       {/* <MuiAlert /> */}
       {/* <MuiSnackbar /> */}
-      <MuiDialog />
+      {/* <MuiDialog /> */}
+      <MuiProgress />
     </div>
   );
 }

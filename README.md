@@ -2279,3 +2279,37 @@ const [open, setOpen] = useState(false);
 - `Cancel` tugmasi – **modalni yopadi** (`open = false`).
 - `Submit` tugmasi – **hozircha hech qanday harakat bajarmaydi**.
 - `autoFocus` – **dialog ochilganda avtomatik ravishda ushbu tugmaga fokus tushadi**.
+
+---
+
+## **📌 35-Dars Progress**
+
+`Progress` komponenti yuklanish jarayonini vizual ko‘rsatish uchun ishlatiladi. U `CircularProgress` (aylana) va `LinearProgress` (chiziq) shakllarida bo‘lib, yuklanish foizini ko‘rsatishi yoki cheksiz animatsiya bilan ishlashi mumkin.
+
+```tsx
+<CircularProgress />
+```
+
+- Oddiy `CircularProgress` hosil qilish
+
+```tsx
+<CircularProgress color="success" />
+```
+
+- `CircularProgress` - ga rang berish
+
+```tsx
+<CircularProgress variant="determinate" value={60} />
+```
+
+- `variant="determinate`" → Bu progressning aniq qiymat bo‘yicha ishlashini bildiradi (foiz orqali ko'rsatiladi).
+- `value={60}` → Progress holati 60% bo‘lishini bildiradi, ya’ni aylana grafikning 60% qismi to‘ldiriladi.
+
+```tsx
+<LinearProgress />
+<LinearProgress color="success" />
+<LinearProgress variant="determinate" value={60} />
+```
+
+- `LinearProgress` chiziqli progress
+- ishlashi va xossalari `CircularProgress` bilan bir xil
