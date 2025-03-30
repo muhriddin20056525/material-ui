@@ -2313,3 +2313,92 @@ const [open, setOpen] = useState(false);
 
 - `LinearProgress` chiziqli progress
 - ishlashi va xossalari `CircularProgress` bilan bir xil
+
+---
+
+## **📌 36-Dars Skeleton**
+
+`Skeleton` komponenti UI yuklanayotganda foydalanuvchilarga vizual ishora berish uchun ishlatiladi. U kontent joylashuvi va shaklini ko‘rsatadigan joy egasi bo‘lib, `matn`, `rasm` yoki `tugmalar` o‘rnida chiqadi. variant xususiyati orqali shakl (`to‘rtburchak`, `doira`, `matn`) tanlanadi. animation opsiyasi bilan silliq harakat yoki pulsatsiya effekti qo‘shish mumkin.
+
+```tsx
+<Skeleton variant="text" />
+```
+
+- `<Skeleton />` – bu MUI kutubxonasidagi yuklanish indikatorini ifodalovchi komponent.
+- `variant="text"` – Skeleton komponentining matn ko‘rinishida chiqishini bildiradi. Bu holatda, u paragraflarga o‘xshash uzun ingichka chiziq sifatida ko‘rinadi.
+
+```tsx
+<Skeleton variant="circular" width={40} height={40} />
+```
+
+- `Avatar` lar uchun doira shaklida skeleton hosil qilish
+
+```tsx
+export default function MuiSkeleton() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  return (
+    <Stack spacing={1} width={"250px"}>
+      <Box sx={{ width: "250px" }}>
+        {loading ? (
+          <Skeleton
+            variant="rectangular"
+            width={256}
+            height={144}
+            animation="wave"
+          />
+        ) : (
+          <img
+            src="https://i.pinimg.com/736x/8f/df/d0/8fdfd06b254a3c22fc416a987f7231d3.jpg"
+            width={256}
+            height={144}
+            alt="image"
+          />
+        )}
+
+        <Stack
+          direction={"row"}
+          spacing={1}
+          sx={{ width: "100%", marginTop: "12px" }}
+        >
+          {loading ? (
+            <Skeleton
+              variant="circular"
+              width={40}
+              height={40}
+              animation="wave"
+            />
+          ) : (
+            <Avatar>V</Avatar>
+          )}
+
+          <Stack sx={{ width: "80%" }}>
+            {loading ? (
+              <>
+                <Typography variant="body1">
+                  <Skeleton variant="text" width={"100%"} animation="wave" />
+                </Typography>
+                <Typography variant="body2">
+                  <Skeleton variant="text" width={"100%"} animation="wave" />
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Typography>React MUI Tutorial</Typography>
+              </>
+            )}
+          </Stack>
+        </Stack>
+      </Box>
+    </Stack>
+  );
+}
+```
+
+- Mui Skeleton komponenti orqali amalyot
