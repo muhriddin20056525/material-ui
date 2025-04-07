@@ -29,6 +29,7 @@
 // import MuiDialog from "./components/MuiDialog";
 // import MuiProgress from "./components/MuiProgress";
 
+import MuiLoadingButton from "./components/MuiLoadingButton";
 import MuiSkeleton from "./components/MuiSkeleton";
 
 export default function App() {
@@ -64,7 +65,8 @@ export default function App() {
       {/* <MuiSnackbar /> */}
       {/* <MuiDialog /> */}
       {/* <MuiProgress /> */}
-      <MuiSkeleton />
+      {/* <MuiSkeleton /> */}
+      <MuiLoadingButton />
     </div>
   );
 }

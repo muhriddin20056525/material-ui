@@ -2402,3 +2402,56 @@ export default function MuiSkeleton() {
 ```
 
 - Mui Skeleton komponenti orqali amalyot
+
+---
+
+## **📌 37-Dars Loading Button**
+
+`LoadingButton` — bu `@mui/lab` kutubxonasidagi tugma komponenti bo‘lib, foydalanuvchi biror amal bajarayotganini ko‘rsatish uchun `spinner` (`loading indicator`) bilan birga ishlatiladi.
+
+Ya'ni, oddiy tugmadan farqli ravishda `LoadingButton` yuklanish holatini ko‘rsatadi.
+
+```bash
+ npm install @mui/lab
+```
+
+- `LoadingButton` dan foydalanish uchun ushbu kutubxonani o'rnatish kerak
+
+```tsx
+<LoadingButton loading variant="outlined">
+  Submit
+</LoadingButton>
+```
+
+- `<LoadingButton>` — yuklanayotgan holatni (loading state) ko‘rsatish uchun ishlatiladi.
+
+- `loading` — bu prop. `loading` holati `true` bo‘lganida:
+  - tugma bosilmaydi (disabled holatga o‘tadi),
+  - tugmaning ichida spinner (loading indicator) chiqadi.
+
+```tsx
+<LoadingButton variant="outlined" loadingIndicator="Loading...">
+  Fetch Data
+</LoadingButton>
+```
+
+- `loadingIndicator` — `loading` holatida (ya’ni `loading={true}` bo‘lsa) tugma ichida `spinner` o‘rniga yoki spinner bilan birga chiqariladigan matn yoki elementni belgilaydi.
+
+- Bu holatda:
+  - Tugma bosilmagan paytda: tugma matni — `Fetch Data`
+  - Tugma loading holatida: matn `Loading...` bo‘ladi
+
+```tsx
+<LoadingButton
+  variant="outlined"
+  loadingPosition="start"
+  startIcon={<Save />}
+  loading
+>
+  Save
+</LoadingButton>
+```
+
+- `startIcon={<Save />}` Tugmaning chap tomonida (bosilmagan holatda) `Save` ikonkasi bo‘ladi. Bu ikonka `@mui/icons-material` kutubxonasidan bo‘ladi.
+- `loadingPosition="start"` `Spinner start` (chap) tomonda chiqishini belgilaydi. Bu `startIcon` joyini egallaydi.
+- `loading` holatida `Save` icon o'rniga `spinner` chiqadi va tugmaning `save` matni saqlanib qoladi
