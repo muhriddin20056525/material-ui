@@ -2455,3 +2455,69 @@ Ya'ni, oddiy tugmadan farqli ravishda `LoadingButton` yuklanish holatini ko‘rs
 - `startIcon={<Save />}` Tugmaning chap tomonida (bosilmagan holatda) `Save` ikonkasi bo‘ladi. Bu ikonka `@mui/icons-material` kutubxonasidan bo‘ladi.
 - `loadingPosition="start"` `Spinner start` (chap) tomonda chiqishini belgilaydi. Bu `startIcon` joyini egallaydi.
 - `loading` holatida `Save` icon o'rniga `spinner` chiqadi va tugmaning `save` matni saqlanib qoladi
+
+---
+
+## **📌 38-Dars Tabs**
+
+`Tabs komponenti` — bu foydalanuvchi interfeysida bir nechta kontent qismlarini bitta joyda soddalashtirib ko‘rsatish imkonini beradi. Har bir tabga bosilganda unga mos kontent paneli ochiladi. Bu UI-ni soddalashtirish va sahifani ortiqcha yuklamaslik uchun juda foydali.
+
+```tsx
+import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { Box, Tab } from "@mui/material";
+import { SyntheticEvent, useState } from "react";
+
+export default function MuiTabs() {
+  const [value, setValue] = useState("1");
+
+  const handleChange = (_event: SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box>
+      <TabContext value={value}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <TabList onChange={handleChange}>
+            <Tab label="Tab one" value={"1"} />
+            <Tab label="Tab two" value={"2"} />
+            <Tab label="Tab three" value={"3"} />
+          </TabList>
+        </Box>
+        <TabPanel value={"1"}>Panel one</TabPanel>
+        <TabPanel value={"2"}>Panel two</TabPanel>
+        <TabPanel value={"3"}>Panel three</TabPanel>
+      </TabContext>
+    </Box>
+  );
+}
+```
+
+- `TabContext` – tanlangan tab (bo‘lim) holatini kontekst sifatida boshqaradi.
+- `TabList` – tab tugmalarini bir joyda to‘plab ko‘rsatadi.
+- `Tab` – har bir tabning tugmasi.
+- `TabPanel` – har bir tabga tegishli kontent joylashadigan joy.
+
+- `value` – hozirgi tanlangan tab (masalan, "1" yoki "2").
+- `setValue` – bu qiymatni yangilaydigan funksiya.
+- `value = "1"` – ya’ni 1-tab ochiq bo‘ladi.
+
+```tsx
+<TabList
+  onChange={handleChange}
+  textColor="secondary"
+  indicatorColor="secondary"
+  centered
+></TabList>
+```
+
+- `textColor="secondary"` - Tab tugmalaridagi matn rangini o‘zgartiradi.
+- `indicatorColor="secondary"` - Tanlangan tab ostidagi pastki chiziq (indicator) ning rangini belgilaydi.
+- `centered` - Bu xususiyat tab tugmalarini markazga joylashtiradi.
+
+```tsx
+<Tab label="Tab one" value={"1"} icon={<Favorite />} iconPosition="start" />
+```
+
+- `icon={<Favorite />}` - Bu tabga ikonka qo‘shadi.
+- `iconPosition="start"` - Bu ikonka matndan oldin chiqishini bildiradi.
