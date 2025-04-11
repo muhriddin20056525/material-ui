@@ -16,11 +16,19 @@
 
 # **Mundarija**
 
-| Nomi                                                            | Havola                         |
-| --------------------------------------------------------------- | ------------------------------ |
-| [1-dars React va Material UI ni o'rnatish][1-dars]              | [2-dars Typography][2-dars]    |
-| [3-dars Buttons][3-dars]                                        | [4-dars ButtonGroup][4-dars]   |
-| [5-Dars ToggleButtonGroup - Matn formatlash komponenti][5-dars] | [6-Dars MUI TextField][6-dars] |
+| Nomi                                                            |
+| --------------------------------------------------------------- |
+| [1-dars React va Material UI ni o'rnatish][1-dars]              |
+| [2-dars Typography][2-dars]                                     |
+| [3-dars Buttons][3-dars]                                        |
+| [4-dars ButtonGroup][4-dars]                                    |
+| [5-Dars ToggleButtonGroup - Matn formatlash komponenti][5-dars] |
+| [6-Dars MUI TextField][6-dars]                                  |
+| [7-Dars MUI Select Menu][7-dars]                                |
+| [8-Dars MUI RadioButton][8-dars]                                |
+| [8-Dars MUI RadioButton][8-dars]                                |
+| [9-Dars MUI Checkbox][9-dars]                                   |
+| [10-Dars MUI Switch][10-dars]                                   |
 
 [1-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-1-dars-react-va-material-ui-ni-ornatish
 [2-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-2-dars-typography
@@ -28,6 +36,10 @@
 [4-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-4-dars-buttongroup
 [5-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-5-dars-togglebuttongroup---matn-formatlash-komponenti
 [6-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-6-dars-mui-textfield
+[7-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-7-dars-mui-select-menu
+[8-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-8-dars-mui-radiobutton
+[9-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-9-dars-mui-checkbox
+[10-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-10-dars-mui-switch
 
 ---
 
@@ -2521,3 +2533,55 @@ export default function MuiTabs() {
 
 - `icon={<Favorite />}` - Bu tabga ikonka qo‘shadi.
 - `iconPosition="start"` - Bu ikonka matndan oldin chiqishini bildiradi.
+
+---
+
+## **📌 39-Dars Timeline**
+
+`Timeline` — bu voqealar yoki bosqichlarni vaqt ketma-ketligida ko‘rsatish uchun ishlatiladigan komponent. U har bir bosqichni TimelineItem orqali ko‘rsatadi va TimelineDot bilan belgilanadi. Masalan, foydalanuvchi profilingdagi faoliyat tarixini ko‘rsatishda juda qulay.
+
+```tsx
+<Timeline>
+  <TimelineItem>
+    <TimelineSeparator>
+      <TimelineDot color="secondary" variant="outlined" />
+      <TimelineConnector />
+    </TimelineSeparator>
+
+    <TimelineContent>City A</TimelineContent>
+  </TimelineItem>
+
+  <TimelineItem>
+    <TimelineSeparator>
+      <TimelineDot color="secondary" variant="outlined" />
+      <TimelineConnector />
+    </TimelineSeparator>
+
+    <TimelineContent>City B</TimelineContent>
+  </TimelineItem>
+
+  <TimelineItem>
+    <TimelineSeparator>
+      <TimelineDot color="secondary" variant="outlined" />
+    </TimelineSeparator>
+
+    <TimelineContent>City C</TimelineContent>
+  </TimelineItem>
+</Timeline>
+```
+
+- `<Timeline>` - Bu — asosiy ustun. Bu vertikal chiziq, uning bo‘ylab bosqichlar joylashadi.
+- `<TimelineItem>` - Bu — bitta bosqich, ya’ni bir nuqta (masalan: “City A”) va unga tegishli matn.
+- `<TimelineSeparator>` -Bu — har bir bosqichdagi grafik belgilarni joylashtiruvchi quti.
+
+- `TimelineDot` - Bu dumaloq nuqta — bosqich belgisi.
+
+  - `color="secondary"` — rangni belgilaydi.
+  - `variant="outlined"` — ichi bo‘sh, faqat chiziq bilan chizilgan doira.
+
+- `TimelineConnector` - Bu pastga qarab chizilgan chiziq.
+
+  - Bu chiziq timeline'dagi keyingi bosqichga ulanadi.
+  - Oxirgi TimelineItemda bu yo‘q — chunki u so‘nggi bosqich.
+
+- `<TimelineContent>` - Bu — matn joyi. Ya’ni foydalanuvchi ko‘radigan “City A”, “City B”, “City C” yozuvlari shu yerda.

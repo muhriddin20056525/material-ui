@@ -32,6 +32,7 @@
 // import MuiSkeleton from "./components/MuiSkeleton";
 
 import MuiTabs from "./components/MuiTabs";
+import MuiTimeline from "./components/MuiTimeline";
 
 export default function App() {
   return (
@@ -68,7 +69,8 @@ export default function App() {
       {/* <MuiProgress /> */}
       {/* <MuiSkeleton /> */}
       {/* <MuiLoadingButton /> */}
-      <MuiTabs />
+      {/* <MuiTabs /> */}
+      <MuiTimeline />
     </div>
   );
 }
