@@ -29,6 +29,16 @@
 | [8-Dars MUI RadioButton][8-dars]                                |
 | [9-Dars MUI Checkbox][9-dars]                                   |
 | [10-Dars MUI Switch][10-dars]                                   |
+| [11-Dars MUI Rating][11-dars]                                   |
+| [12-Dars Autocomplete][12-dars]                                 |
+| [13-Dars Box][13-dars]                                          |
+| [14-Dars Stack][14-dars]                                        |
+| [15-Dars Grid][15-dars]                                         |
+| [16-Dars Paper][16-dars]                                        |
+| [17-Dars Card][17-dars]                                         |
+| [18-Dars Accordion][18-dars]                                    |
+| [19-Dars ImageList][19-dars]                                    |
+| [20-Dars Navbar][20-dars]                                       |
 
 [1-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-1-dars-react-va-material-ui-ni-ornatish
 [2-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-2-dars-typography
@@ -40,6 +50,16 @@
 [8-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-8-dars-mui-radiobutton
 [9-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-9-dars-mui-checkbox
 [10-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-10-dars-mui-switch
+[11-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-11-dars-mui-rating
+[12-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-12-dars-autocomplete
+[13-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-13-dars-box
+[14-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-14-dars-stack
+[15-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-15-dars-grid
+[16-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-16-dars-paper
+[17-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-17-dars-card
+[18-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-18-dars-accordion
+[19-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-19-dars-imagelist
+[20-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-20-dars-navbar
 
 ---
 
@@ -2585,3 +2605,49 @@ export default function MuiTabs() {
   - Oxirgi TimelineItemda bu yo‘q — chunki u so‘nggi bosqich.
 
 - `<TimelineContent>` - Bu — matn joyi. Ya’ni foydalanuvchi ko‘radigan “City A”, “City B”, “City C” yozuvlari shu yerda.
+
+---
+
+## **📌 40-Dars Masonry**
+
+`Masonry komponenti` – Pinterestga o‘xshash interfeyslar yasash uchun ishlatiladigan grid ga o'xshab ketadigan tizim.
+
+```tsx
+import { Masonry } from "@mui/lab";
+import { Box, Paper } from "@mui/material";
+
+const heights = [
+  150, 30, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 30, 50, 80,
+];
+
+export default function MuiMasonry() {
+  return (
+    <Box sx={{ with: 500, height: 400 }}>
+      <Masonry columns={4} spacing={1}>
+        {heights.map((height, index) => (
+          <Paper
+            key={index}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height,
+              border: "1px solid",
+            }}
+          >
+            {index + 1}
+          </Paper>
+        ))}
+      </Masonry>
+    </Box>
+  );
+}
+```
+
+- `Masonry` – Material UI @mui/lab kutubxonasidan olingan `Masonry` layout komponenti.
+- `Box` – `div` ga o‘xshash konteyner, MUI uslublari bilan ishlashni osonlashtiradi.
+- `Paper` – Material UI card komponenti.
+- `heights` - Bu massivda har bir elementning balandligi (height) aniqlangan. Har bir Paper shu qiymatga qarab balandlik oladi.
+- `<Masonry columns={4} spacing={1}>`
+  - `columns={4}` – 4 ta ustunga bo‘linadi.
+  - `spacing={1}` – elementlar orasidagi masofa (MUI spacing birligida).
