@@ -32,6 +32,7 @@
 // import MuiSkeleton from "./components/MuiSkeleton";
 
 import MuiMasonry from "./components/MuiMasonry";
+import MuiResponsiveness from "./components/MuiResponsiveness";
 import MuiTabs from "./components/MuiTabs";
 import MuiTimeline from "./components/MuiTimeline";
 
@@ -72,7 +73,8 @@ export default function App() {
       {/* <MuiLoadingButton /> */}
       {/* <MuiTabs /> */}
       {/* <MuiTimeline /> */}
-      <MuiMasonry />
+      {/* <MuiMasonry /> */}
+      <MuiResponsiveness />
     </div>
   );
 }

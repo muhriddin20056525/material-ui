@@ -60,6 +60,16 @@
 [18-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-18-dars-accordion
 [19-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-19-dars-imagelist
 [20-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-20-dars-navbar
+[21-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-21-dars-menu
+[22-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-22-dars-link
+[23-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-23-dars-breadcrumbs
+[24-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-24-dars-drawer
+[25-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-25-dars-speed-dial
+[26-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-26-dars-bottom-navigation
+[27-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-27-dars-avatar
+[28-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-27-dars-badge
+[29-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-28-dars-list
+[30-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-25-dars-speed-dial
 
 ---
 
@@ -1707,7 +1717,7 @@ import { Avatar } from "@mui/material";
 
 ---
 
-## **📌 27-Dars Badge**
+## **📌 28-Dars Badge**
 
 Material UI (MUI) da Badge — bu komponent yoki ikonkaning ustiga qo‘yiladigan belgi bo‘lib, odatda xabarlar soni, bildirishnomalar yoki boshqa qo‘shimcha ma’lumotlarni ko‘rsatish uchun ishlatiladi.
 
@@ -1758,7 +1768,7 @@ Material UI (MUI) da Badge — bu komponent yoki ikonkaning ustiga qo‘yiladiga
 
 ---
 
-## **📌 28-Dars List**
+## **📌 29-Dars List**
 
 ```tsx
 <List>
@@ -1854,7 +1864,7 @@ Material UI (MUI) da Badge — bu komponent yoki ikonkaning ustiga qo‘yiladiga
 
 ---
 
-## **📌 29-Dars Chip**
+## **📌 30-Dars Chip**
 
 Material UI (MUI) da Chip – kichik, kompakt element bo‘lib, u foydalanuvchiga `teglar`, `toifalar` yoki boshqa `kichik ma’lumotlarni` ko‘rsatish uchun ishlatiladi. Chip komponenti odatda quyidagi maqsadlarda ishlatiladi:
 
@@ -1934,7 +1944,7 @@ const handleDelete = (chipToDelete: string) => {
 
 ---
 
-## **📌 30-Dars Tooltip**
+## **📌 31-Dars Tooltip**
 
 `Material UI` dagi `Tooltip` komponenti foydalanuvchiga sichqoncha bilan ustiga borganida (`hover`), bosganda (`click`) yoki fokuslanganda (`focus`) qo‘shimcha ma’lumot berish uchun ishlatiladi.
 
@@ -1969,7 +1979,7 @@ const handleDelete = (chipToDelete: string) => {
 
 ---
 
-## **📌 31-Dars Tables**
+## **📌 32-Dars Tables**
 
 ```tsx
 import {
@@ -2023,7 +2033,7 @@ export default function MuiTable() {
 
 ---
 
-## **📌 32-Dars Alert**
+## **📌 33-Dars Alert**
 
 `Alert` — bu Material UI kutubxonasidagi tayyor komponent bo‘lib, foydalanuvchilarga xabar yoki bildirishnoma ko‘rsatish uchun ishlatiladi. U xato (`error`), ogohlantirish (`warning`), axborot (`info`) va muvaffaqiyat (`success`) kabi holatlarni bildirishi mumkin. Vizual jihatdan turli ranglarda chiqadi: qizil (xato), sariq (ogohlantirish), ko‘k (axborot) va yashil (muvaffaqiyat). `Alert` odatda foydalanuvchini ogohlantirish yoki muhim ma’lumot berish uchun ishlatiladi.
 
@@ -2116,7 +2126,7 @@ export default function MuiTable() {
 
 ---
 
-## **📌 33-Dars Snackbar**
+## **📌 34-Dars Snackbar**
 
 `MUI (Material-UI) Snackbar` — bu foydalanuvchiga vaqtinchalik xabar ko'rsatish uchun ishlatiladigan komponent. Odatda, u ekranning pastki qismida chiqadi va bir necha soniyadan so‘ng avtomatik ravishda yo‘qoladi.
 
@@ -2171,7 +2181,7 @@ export default function MuiSnackbar() {
 
 ---
 
-## **📌 34-Dars Dialog**
+## **📌 35-Dars Dialog**
 
 `Dialog komponenti` – bu modallarni yaratish uchun ishlatiladigan komponent. U foydalanuvchiga maxsus ma’lumot yoki tanlovlar taqdim etish uchun ekranning ustki qatlamida paydo bo‘ladi.
 
@@ -2314,7 +2324,7 @@ const [open, setOpen] = useState(false);
 
 ---
 
-## **📌 35-Dars Progress**
+## **📌 36-Dars Progress**
 
 `Progress` komponenti yuklanish jarayonini vizual ko‘rsatish uchun ishlatiladi. U `CircularProgress` (aylana) va `LinearProgress` (chiziq) shakllarida bo‘lib, yuklanish foizini ko‘rsatishi yoki cheksiz animatsiya bilan ishlashi mumkin.
 
@@ -2348,7 +2358,7 @@ const [open, setOpen] = useState(false);
 
 ---
 
-## **📌 36-Dars Skeleton**
+## **📌 37-Dars Skeleton**
 
 `Skeleton` komponenti UI yuklanayotganda foydalanuvchilarga vizual ishora berish uchun ishlatiladi. U kontent joylashuvi va shaklini ko‘rsatadigan joy egasi bo‘lib, `matn`, `rasm` yoki `tugmalar` o‘rnida chiqadi. variant xususiyati orqali shakl (`to‘rtburchak`, `doira`, `matn`) tanlanadi. animation opsiyasi bilan silliq harakat yoki pulsatsiya effekti qo‘shish mumkin.
 
@@ -2437,7 +2447,7 @@ export default function MuiSkeleton() {
 
 ---
 
-## **📌 37-Dars Loading Button**
+## **📌 38-Dars Loading Button**
 
 `LoadingButton` — bu `@mui/lab` kutubxonasidagi tugma komponenti bo‘lib, foydalanuvchi biror amal bajarayotganini ko‘rsatish uchun `spinner` (`loading indicator`) bilan birga ishlatiladi.
 
@@ -2490,7 +2500,7 @@ Ya'ni, oddiy tugmadan farqli ravishda `LoadingButton` yuklanish holatini ko‘rs
 
 ---
 
-## **📌 38-Dars Tabs**
+## **📌 39-Dars Tabs**
 
 `Tabs komponenti` — bu foydalanuvchi interfeysida bir nechta kontent qismlarini bitta joyda soddalashtirib ko‘rsatish imkonini beradi. Har bir tabga bosilganda unga mos kontent paneli ochiladi. Bu UI-ni soddalashtirish va sahifani ortiqcha yuklamaslik uchun juda foydali.
 
@@ -2556,7 +2566,7 @@ export default function MuiTabs() {
 
 ---
 
-## **📌 39-Dars Timeline**
+## **📌 40-Dars Timeline**
 
 `Timeline` — bu voqealar yoki bosqichlarni vaqt ketma-ketligida ko‘rsatish uchun ishlatiladigan komponent. U har bir bosqichni TimelineItem orqali ko‘rsatadi va TimelineDot bilan belgilanadi. Masalan, foydalanuvchi profilingdagi faoliyat tarixini ko‘rsatishda juda qulay.
 
@@ -2608,7 +2618,7 @@ export default function MuiTabs() {
 
 ---
 
-## **📌 40-Dars Masonry**
+## **📌 41-Dars Masonry**
 
 `Masonry komponenti` – Pinterestga o‘xshash interfeyslar yasash uchun ishlatiladigan grid ga o'xshab ketadigan tizim.
 
@@ -2651,3 +2661,29 @@ export default function MuiMasonry() {
 - `<Masonry columns={4} spacing={1}>`
   - `columns={4}` – 4 ta ustunga bo‘linadi.
   - `spacing={1}` – elementlar orasidagi masofa (MUI spacing birligida).
+
+---
+
+## **📌 42-Dars Responsiveness**
+
+`Responsiveness` — bu komponentlar turli ekran o‘lchamlariga moslashishi degani. U turli qurilmalarda (mobil, planshet, kompyuter) interfeysni qulay ko‘rsatadi. `Grid`, `Box`, va `useMediaQuery` kabi vositalar yordamida moslashuvchanlikni boshqarish mumkin. Breakpoint'lar (`xs, sm, md, lg, xl`) orqali komponentlar har xil o‘lchamlarda qanday ko‘rinishini belgilash mumkin. Bu foydalanuvchiga har qanday ekranda chiroyli va qulay dizaynni ta’minlaydi.
+
+```tsx
+<Box
+  sx={{
+    height: "300px",
+    width: { xs: 100, sm: 200, md: 300, lg: 400, xl: 500 },
+    bgcolor: "primary.main",
+  }}
+></Box>
+```
+
+- `height: "300px"` — har qanday ekran o‘lchamida bo‘yi (balandligi) 300px bo‘ladi.
+- `width: { xs: 100, sm: 200, md: 300, lg: 400, xl: 500 }` — ekran o‘lchamiga qarab eni o‘zgaradi:
+
+- `Breakpoint	Kalit so'z	Ekran kengligi (min-width)`
+- `xs` Extra small `0px` dan boshlab
+- `sm` Small `600px` dan boshlab
+- `md` Medium `900px` dan boshlab
+- `lg` Large `1200px` dan boshlab
+- `xl` Extra large `1536px` dan boshlab
