@@ -39,6 +39,16 @@
 | [18-Dars Accordion][18-dars]                                    |
 | [19-Dars ImageList][19-dars]                                    |
 | [20-Dars Navbar][20-dars]                                       |
+| [21-Dars Menu][21-dars]                                         |
+| [22-Dars Link][22-dars]                                         |
+| [23-Dars Breadcrumbs][23-dars]                                  |
+| [24-Dars Drawer][24-dars]                                       |
+| [25-Dars Speed Dial][25-dars]                                   |
+| [26-Dars Bottom Navigation][26-dars]                            |
+| [27-Dars Avatar][27-dars]                                       |
+| [28-Dars Badge][28-dars]                                        |
+| [29-Dars List][29-dars]                                         |
+| [30-Dars Chip][30-dars]                                         |
 
 [1-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-1-dars-react-va-material-ui-ni-ornatish
 [2-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-2-dars-typography
@@ -67,9 +77,9 @@
 [25-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-25-dars-speed-dial
 [26-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-26-dars-bottom-navigation
 [27-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-27-dars-avatar
-[28-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-27-dars-badge
-[29-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-28-dars-list
-[30-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-25-dars-speed-dial
+[28-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-28-dars-badge
+[29-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-29-dars-list
+[30-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-30-dars-chip
 
 ---
 
