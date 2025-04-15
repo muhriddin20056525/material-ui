@@ -61,6 +61,7 @@
 | [40-Dars Timeline][40-dars]                                     |
 | [41-Dars Masonry][41-dars]                                      |
 | [42-Dars Responsiveness][42-dars]                               |
+| [43-Dars Customizing Theme][43-dars]                            |
 
 [1-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-1-dars-react-va-material-ui-ni-ornatish
 [2-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-2-dars-typography
@@ -104,6 +105,7 @@
 [40-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-40-dars-timeline
 [41-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-41-dars-masonry
 [42-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-42-dars-responsiveness
+[43-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-43-dars-customizing-theme
 
 ---
 
