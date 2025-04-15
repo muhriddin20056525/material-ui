@@ -49,6 +49,18 @@
 | [28-Dars Badge][28-dars]                                        |
 | [29-Dars List][29-dars]                                         |
 | [30-Dars Chip][30-dars]                                         |
+| [31-Dars Tooltip][31-dars]                                      |
+| [32-Dars Tables][32-dars]                                       |
+| [33-Dars Alert][33-dars]                                        |
+| [34-Dars Snackbar][34-dars]                                     |
+| [35-Dars Dialog][35-dars]                                       |
+| [36-Dars Progress][36-dars]                                     |
+| [37-Dars Skeleton][37-dars]                                     |
+| [38-Dars Loading Button][38-dars]                               |
+| [39-Dars Tabs][39-dars]                                         |
+| [40-Dars Timeline][40-dars]                                     |
+| [41-Dars Masonry][41-dars]                                      |
+| [42-Dars Responsiveness][42-dars]                               |
 
 [1-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-1-dars-react-va-material-ui-ni-ornatish
 [2-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-2-dars-typography
@@ -80,6 +92,18 @@
 [28-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-28-dars-badge
 [29-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-29-dars-list
 [30-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-30-dars-chip
+[31-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-31-dars-tooltip
+[32-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-32-dars-tables
+[33-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-33-dars-alert
+[34-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-34-dars-snackbar
+[35-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-35-dars-dialog
+[36-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-36-dars-progress
+[37-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-37-dars-skeleton
+[38-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-38-dars-loading-button
+[39-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-39-dars-tabs
+[40-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-40-dars-timeline
+[41-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-41-dars-masonry
+[42-dars]: https://github.com/muhriddin20056525/material-ui?tab=readme-ov-file#-42-dars-responsiveness
 
 ---
 
@@ -2697,3 +2721,52 @@ export default function MuiMasonry() {
 - `md` Medium `900px` dan boshlab
 - `lg` Large `1200px` dan boshlab
 - `xl` Extra large `1536px` dan boshlab
+
+---
+
+## **📌 43-Dars Customizing Theme**
+
+`Customizing Theme` — bu sizning ilovangizga mos qilib ranglar, shriftlar, spacing, border-radius kabi umumiy dizayn qoidalarini sozlashga aytiladi.
+
+```tsx
+import { createTheme, colors, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  status: {
+    danger: "#e53e3e",
+  },
+  palette: {
+    secondary: {
+      main: colors.orange[500],
+    },
+    neutral: {
+      main: colors.grey[500],
+      darker: colors.grey[700],
+    },
+  },
+});
+
+<ThemeProvider theme={theme}>
+  <div className="app"></div>
+</ThemeProvider>;
+```
+
+- `import { createTheme, colors, ThemeProvider } from "@mui/material";`
+  - `createTheme` – bu MUI’ga moslashtirilgan theme (mavzu) yaratish funksiyasi.
+  - `colors` – bu MUI kutubxonasidagi oldindan tayyorlangan rang to‘plami (grey, orange va hokazo).
+  - `ThemeProvider` – bu komponent React ilovangizga siz yaratgan themeni uzatadi.
+- `const theme = createTheme({`
+  - `theme` obyektini yaratish
+- `status: {danger: "#e53e3e"},`
+  - `status` maxsus (custom) bo‘lim yaratilgan, bu MUI default theme’da mavjud emas.
+  - `theme.status.danger` deb chaqirilganda xatolik chiqmasligi uchun Type qo'shish kerak
+- `palette: {}`
+  - `palette` – bu Material UI’da ranglar sxemasi. Ichida `primary`, `secondary`, `error`, `info` va siz xohlagan custom ranglar bo‘ladi.
+- ` secondary: {main: colors.orange[500]},`
+  - `secondary` rangni `orange[500]` bilan sozlash.
+  - `colors.orange[500]` — bu MUI tayyor orange rangining `500-darajadagi` variantidir (asosan asosiy rang sifatida ishlatiladi).
+- `neutral: {main: colors.grey[500],darker: colors.grey[700]},`
+  - `neutral` custom rang bo‘limi. `main` – asosiy kulrang, `darker` – uning quyuqroq versiyasi.
+  - `theme.palette.neutral.main` deb komponentlarda chaqirish mumkin
+- `<ThemeProvider theme={theme}>`
+  - Bu komponent butun ichki komponentlarga themeni uzatadi (context orqali).
